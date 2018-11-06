@@ -5,12 +5,15 @@ class FeatureSelector(object):
 		None
 
 	def attach_dataset(self, dataset):
-		self.data = dataset.raw
+		self.data = dataset
 
-	def select(self):
+	def select(self, params={}):
 		 raise NotImplementedError
 
-	def features(self):	
+	def training_data(self):	
+		raise NotImplementedError
+
+	def test_data(self):	
 		raise NotImplementedError
 
 	def desc(self):
