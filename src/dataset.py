@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 import consts as cs
 from sklearn.model_selection import train_test_split
+from utils import myprint
 
 class Dataset(object):
 
@@ -28,6 +29,10 @@ class Dataset(object):
 		cdf = pd.read_csv(clinical_file_path, header=0, index_col=0)
 
 		agg = cdf.join(df.T)
+
+		for col, value in cs.dataset_filter.items():
+			myprint('Filtering dataset on column \"{}\"" with value {}'.format(col,value))
+			agg = agg.loc[lambda df: df.get(col) == value, :]
 		
 		self.train_set, self.test_set = train_test_split(agg, test_size=0.2, random_state=77)
 
