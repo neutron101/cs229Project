@@ -3,7 +3,7 @@ import sys
 import argparse
 from dataset import Dataset
 from utils import myprint, load_all_modules_from_dir
-
+from argparse import RawTextHelpFormatter
 from stats import Stats
 from mlfactory import MLFactory as mlf
 
@@ -89,7 +89,8 @@ def setup_args():
 	no_of_fselectors = len(mlf.feature_selectors.keys())
 	no_of_cselectors = len(mlf.classifiers.keys())
 
-	parser = argparse.ArgumentParser(description = 'Select feature selector and classifier')
+	parser = argparse.ArgumentParser(description = 'Select feature selector and classifier', \
+									formatter_class=RawTextHelpFormatter)
 	value = ''
 	for key in mlf.feature_selectors.keys():
 		value = '{}\n{} - > {}'.format(value, key, mlf.feature_selectors[key]().__class__.__name__)
