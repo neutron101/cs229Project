@@ -21,12 +21,13 @@ class Dataset(object):
 		self.patient_ids = list(df.axes[1].values)
 		self.data = df.values
 
-		print('Loaded data for {} genes. Examples: {}'.format(len(self.gene_ids), self.gene_ids[0:4]))
-		print('Loaded data for {} patients. Examples: {}'.format(len(self.patient_ids), self.patient_ids[0:4]))
-		print('Records loaded {}'.format(np.shape(self.data)))
+		print('Loaded data for {} genes. Examples: {}....'.format(len(self.gene_ids), self.gene_ids[0:4]))
+		print('Loaded data for {} patients. Examples: {}....'.format(len(self.patient_ids), self.patient_ids[0:4]))
 
 		clinical_file_path = os.path.join(self.data_dir, cs.clinical_file)
 		cdf = pd.read_csv(clinical_file_path, header=0, index_col=0)
+
+		print('Loaded clinial data with {} features. Examples: {}....'.format(cdf.shape[1], cdf.axes[1].values[0:4]))
 
 		agg = cdf.join(df.T)
 
@@ -34,7 +35,9 @@ class Dataset(object):
 			myprint('Filtering dataset on column \"{}\"" with value {}'.format(col,value))
 			agg = agg.loc[lambda df: df.get(col) == value, :]
 		
-		self.train_set, self.test_set = train_test_split(agg, test_size=0.2, random_state=77)
+		self.train_set, self.test_set = train_test_split(agg, test_size=0.2, \
+										random_state=77, \
+										stratify=agg.get('cohort').values)
 
 
 	def genes(self):
