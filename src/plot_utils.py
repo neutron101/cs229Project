@@ -1,6 +1,10 @@
 from sklearn.metrics import confusion_matrix
 import matplotlib.pyplot as plt
 import itertools
+import os
+import consts as cs
+from scipy.interpolate import spline
+import numpy as np
 
 
 def plot_confusion_matrix(self,cm, classes=['Cancer','Healthy'],
@@ -36,3 +40,15 @@ def plot_confusion_matrix(self,cm, classes=['Cancer','Healthy'],
     plt.ylabel('True label')
     plt.xlabel('Predicted label')
     plt.tight_layout()
+
+
+def plotline(x, y, save_filename, xlabel, ylabel):
+ 
+    # Plot dataset
+    plt.figure()
+    plt.plot(x, y, '.', linewidth=1)
+
+    # Add labels and save to disk
+    plt.xlabel(xlabel)
+    plt.ylabel(ylabel)
+    plt.savefig(os.path.join(cs.output_dir, save_filename))

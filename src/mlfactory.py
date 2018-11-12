@@ -23,10 +23,11 @@ class MLFactory(object):
 	@classmethod
 	def create_feature_selector(cl, idx):
 		from pydoc import locate
-		my_class = cl.feature_selectors[idx]
+		my_class = locate(cl.feature_selectors[idx])
 		return my_class()
 
 	@classmethod
 	def create_classifier(cl, idx):
-		my_class = cl.classifiers[idx]
+		from pydoc import locate
+		my_class = locate(cl.classifiers[idx])
 		return my_class()

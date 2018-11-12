@@ -4,6 +4,7 @@ import pkgutil
 import sys
 from pydoc import locate
 import inspect
+from sklearn.metrics import confusion_matrix
 
 def myprint(str, filename=None):
 	if filename is not None:
@@ -24,3 +25,10 @@ def load_all_modules_from_dir(dirname,exclusions=[]):
 					class_list.append(cl[1])
 
 	return class_list
+
+
+
+def tn(y_true, y_pred): return confusion_matrix(y_true, y_pred)[0, 0]
+def fp(y_true, y_pred): return confusion_matrix(y_true, y_pred)[0, 1]
+def fn(y_true, y_pred): return confusion_matrix(y_true, y_pred)[1, 0]
+def tp(y_true, y_pred): return confusion_matrix(y_true, y_pred)[1, 1]
