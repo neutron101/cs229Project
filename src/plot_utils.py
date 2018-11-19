@@ -42,13 +42,14 @@ def plot_confusion_matrix(self,cm, classes=['Cancer','Healthy'],
     plt.tight_layout()
 
 
-def plotline(x, y, save_filename, xlabel, ylabel):
+def plotline(x, y, save_filename, xlabel, ylabel, title=None):
  
     # Plot dataset
     plt.figure()
     plt.plot(x, y, '.', linewidth=1)
+    plt.title(title)
 
     # Add labels and save to disk
     plt.xlabel(xlabel)
     plt.ylabel(ylabel)
-    plt.savefig(os.path.join(cs.output_dir, save_filename))
+    plt.savefig(os.path.join(cs.output_dir, save_filename)+'.png')

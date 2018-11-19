@@ -6,7 +6,7 @@ class FeatureSelector(object):
 	def attach_dataset(self, dataset):
 		self.data = dataset
 
-	def select(self, params={}):
+	def select(self, params=None):
 		 raise NotImplementedError
 
 	def training_data(self):	

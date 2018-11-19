@@ -18,17 +18,19 @@ class Stats(object):
 	def set_printheader(self, header):
 		self.header = header
 
-	def mystats(self, filename=None):
-		myprint('-------------Statistics-------------------------------------\n', filename)
-		myprint(self.header, filename)
+	def mystats(self, filename=None, cond=None):
+	
+		if cond is None or cond is not None and cond(self):
+			myprint('-------------Statistics-------------------------------------\n', filename)
+			myprint(self.header, filename)
 
-		myprint('Accuracy={d[0]:3.6f} Sensitivity={d[1]:3.3f} Specificity={d[2]:3.3f} f1_score={d[3]:3.3f}'.format(d=self.conf_based_stats()),filename)
-		myprint('Confusion matrix: tn={d[0]:02.4f}, fp={d[1]:02.4f}, fn={d[2]:02.4f}, tp={d[3]:02.4f}'.format(d=self.cnf_matrix.ravel()),filename)				
-		myprint('Normalized Confusion matrix: tn={d[0]:02.4f}, fp={d[1]:02.4f}, fn={d[2]:02.4f}, tp={d[3]:02.4f}\n'.format(d=self.cnf_matrix_norm.ravel()),filename)
+			myprint('Accuracy={d[0]:3.6f} Sensitivity={d[1]:3.3f} Specificity={d[2]:3.3f} f1_score={d[3]:3.3f} \n'.format(d=self.conf_based_stats()),filename)
+			myprint('Confusion matrix: tn={d[0]:02.4f}, fp={d[1]:02.4f}, fn={d[2]:02.4f}, tp={d[3]:02.4f} \n'.format(d=self.cnf_matrix.ravel()),filename)				
+			myprint('Normalized Confusion matrix: tn={d[0]:02.4f}, fp={d[1]:02.4f}, fn={d[2]:02.4f}, tp={d[3]:02.4f} \n'.format(d=self.cnf_matrix_norm.ravel()),filename)
 
-		myprint('------------------------------------------------------------\n', filename)
+			myprint('------------------------------------------------------------\n', filename)
 
-	def classifier_stats(self, filename=None):
+	def classifier_stats(self, filename=None, title=None):
 		sensitivity = []
 		specificity = []
 
@@ -39,7 +41,7 @@ class Stats(object):
 					specificity.append(1-st.conf_based_stats()[2])
 
 			if len(sensitivity) > 0 and len(specificity) > 0:
-				pu.plotline(specificity, sensitivity, filename, '1-Specificity', 'Sensitivity')
+				pu.plotline(specificity, sensitivity, filename, '1-Specificity', 'Sensitivity', title)
 
 
 	def classifiers_stats(self, filename=None):
