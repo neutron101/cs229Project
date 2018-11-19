@@ -10,15 +10,17 @@ class ForwardBackwardSelector(FeatureSelector):
 
 	def select(self, params={'forward':False}):
 		
-		features = list(self.data.genes())
+		if bool(params) and 'feature_file' in params:
+			feature_file = params['feature_file']
+			features = utils.load_string_data(feature_file)
+		else:			
+			features = list(self.data.genes())
 
-		if not params['forward']:
+		if 'backward' in params:
 			features.reverse()
 
 		self.features = self._create_featurelist(features)
 
-		print('No of {} feature options {}. Examples: {}'.format('forward' if params['forward'] else 'backward', \
-			len(self.features), self.features[0:4]))
 
 	def _create_featurelist(self, features):
 
@@ -128,10 +130,11 @@ class FixedSetSelector(FeatureSelector):
 		super(FixedSetSelector, self).__init__()
 		self.best_feature_file = 'BEST'
 
-	def select(self, params):
-		self.best_feature_file = params['best_feature_file'] if params is not None and 'best_feature_file' in params else self.best_feature_file	
-		value = utils.load_string_data(self.best_feature_file )
-		self.features = list(value)
+	def select(self, params=None):
+		self.best_feature_file = params['feature_file'] if params is not None and 'feature_file' in params else self.best_feature_file	
+		value = utils.load_string_data(self.best_feature_file)
+		self.features = []
+		self.features.append(value)
 
 	def training_data(self):
 		X, Y = self.data.for_train().gene_data()	
@@ -152,6 +155,12 @@ class PCAFeatureSelector(FeatureSelector):
 	def select(self, params=None):
 		
 		X, y = self.data.for_train().gene_data()
+
+		if bool(params) and 'feature_file' in params:
+			feature_file = params['feature_file']
+			features = utils.load_string_data(feature_file)
+			X = X.filter(items=features, axis=0)
+
 		data = X.values 
 		print('Gene data size {}'.format(data.shape))
 		
@@ -160,6 +169,7 @@ class PCAFeatureSelector(FeatureSelector):
 		pca.fit(data)
 
 		print(pca.singular_values_)
+		print(pca.components_[0], np.max(pca.components_[0]))
 		sing_values = pca.singular_values_
 		agg = 0
 		for i in range(1, len(sing_values)):
@@ -176,10 +186,10 @@ class PCAFeatureSelector(FeatureSelector):
 		print('99 percent variance captured by {} vectors'.format(i))
 
 	def training_data(self):
-		return ([], [])
+		return ()
 
 	def test_data(self):	
-		return ([],[])
+		return ()
 
 	def desc(self):
 		return 'PCA Feature Selector'
@@ -192,7 +202,11 @@ class SingleFeatureSelector(FeatureSelector):
 
 	def select(self, params=None):
 		
-		features = list(self.data.genes())
+		if bool(params) and 'feature_file' in params:
+			feature_file = params['feature_file']
+			features = utils.load_string_data(feature_file)
+		else:			
+			features = list(self.data.genes())
 
 		self.features = self._create_featurelist(features)
 

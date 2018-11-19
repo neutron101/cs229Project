@@ -14,6 +14,7 @@ class Stats(object):
 	def __init__(self):
 		self.classifier_stat = []
 		self.classifiers_stat = {}
+		self.metrics = {}
 
 	def set_printheader(self, header):
 		self.header = header
@@ -35,14 +36,25 @@ class Stats(object):
 		specificity = []
 
 		if len(self.classifier_stat) > 0:
+			metrics = {}
 			for st in self.classifier_stat:
 				if st.conf_based_stats() is not None:
 					sensitivity.append(st.conf_based_stats()[1])
 					specificity.append(1-st.conf_based_stats()[2])
 
+				if bool(st.metrics):
+					for key, value in st.metrics.items():
+						if key not in metrics:
+							metrics[key] = []
+						metrics[key].append(value)
+
 			if len(sensitivity) > 0 and len(specificity) > 0:
 				pu.plotline(specificity, sensitivity, filename, '1-Specificity', 'Sensitivity', title)
 
+			if bool(metrics):
+				for key, values in metrics.items():
+					pu.plotline(np.linspace(1,len(values), num=len(values)), values, filename+'_'+key, 'Set', key, key)
+				
 
 	def classifiers_stats(self, filename=None):
 		pass
@@ -87,7 +99,9 @@ class Stats(object):
 		precision = tp/(tp+fp)
 		f1_score = (2*precision*sensitivity)/(precision+sensitivity)
 
-		return accuracy, sensitivity, specificity, f1_score
+		my_score = (tp+tn)/fn
+
+		return accuracy, sensitivity, specificity, f1_score, my_score
 
 
 	def add_classifier_stat(self, another):
@@ -95,3 +109,9 @@ class Stats(object):
 
 	def add_classifiers_stat(self, another, classifier_name):
 		self.classifiers_stat[classifier_name] = another
+
+	def add_metric(self, value, metric):
+		if metric not in self.metrics:
+			self.metrics[metric] = []
+
+		self.metrics[metric].append(value)

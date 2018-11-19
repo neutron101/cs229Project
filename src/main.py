@@ -92,7 +92,7 @@ def model_selection(feature_selector, classifier, dataset, write_filename=None):
 				print('Finished model selection with classifer "{}" with feature selector "{}"'.format(classifier.desc(), feature_selector.desc()))
 
 				stats.set_printheader(stat_header({'FeatureCount':data[0].shape[0], 'Set':f_idx}, classifier.desc()))
-				stats.mystats(filename=write_filename)
+				stats.mystats(filename=write_filename, cond=lambda s: s.conf_based_stats()[0]>0)
 				classifier_stats.add_classifier_stat(stats)
 
 				## Thresholding for good feature set selection which will be saved later
@@ -100,6 +100,8 @@ def model_selection(feature_selector, classifier, dataset, write_filename=None):
 					X, _ = data
 					fea = X.axes[0].values
 					best.append(fea)
+
+				stats.add_metric(stats.conf_based_stats()[0], 'Accuracy')
 
 			utils.save_string_data(os.path.join(config.get('output_dir'), config.get('best_features_file')), best)
 
@@ -146,11 +148,11 @@ def test(feature_selector, classifier, dataset, write_filename=None):
 				stats.record_confusion_matrix(test_data[1])
 
 				#writes data to a file/console if the optional condition is true
-				stats.mystats(filename=write_filename, cond=lambda s: s.conf_based_stats()[0]>.72)
+				stats.mystats(filename=write_filename, cond=lambda s: s.conf_based_stats()[0]>.5)
 
 				classifier_stats.add_classifier_stat(stats)
 
-		all_classifier_stats.add_classifiers_stat(classifier_stats)
+		all_classifier_stats.add_classifiers_stat(classifier_stats, classifier.desc())
 
 	return all_classifier_stats
 
