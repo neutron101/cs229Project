@@ -71,8 +71,8 @@ def model_selection(feature_selector, classifier, dataset, write_filename=None):
 	feature_sel_name = feature_selector.__class__.__name__
 	classifier_name = classifier.__class__.__name__
 
-	sel_params_list = config.get('test_selector_params').get(feature_sel_name) if config.get('test_selector_params').get(feature_sel_name) is not None else [{}]
-	cl_params_list = config.get('test_classifier_params').get(classifier_name) if config.get('test_classifier_params').get(classifier_name) is not None else [{}]
+	sel_params_list = config.get('model_selector_params').get(feature_sel_name) if config.get('model_selector_params').get(feature_sel_name) is not None else [{}]
+	cl_params_list = config.get('model_classifier_params').get(classifier_name) if config.get('model_classifier_params').get(classifier_name) is not None else [{}]
 
 	all_classifier_stats = Stats()
 	for cl_param in cl_params_list:
