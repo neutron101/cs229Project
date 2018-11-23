@@ -6,6 +6,7 @@ import numpy as np
 from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import confusion_matrix
 import utils
+import ast
 
 class SVM(BaseClassifier):
 
@@ -101,7 +102,7 @@ class SVMModelParameterEstimator(BaseClassifier):
 
 	def __init__(self):
 		super(SVMModelParameterEstimator, self).__init__()
-		self.best_params = 'TBD'
+		self.best_params = {}
 		
 	def fit(self, data, params=None):
 
@@ -113,7 +114,7 @@ class SVMModelParameterEstimator(BaseClassifier):
 		            {'kernel': ['linear'], 'C': [1, 5, 10, 50, 100]},
 		            {'kernel': ['poly'], 'C': [1, 5, 10, 50, 100], 'degree':[2,3,4], 'gamma': [0.1, 0.5, 1.25, 1, 1.5, 2], 'coef0' : [0,1,10]}]
 
-		self.cv = GridSearchCV(SVC(), tuned_parameters, cv=5,
+		self.cv = GridSearchCV(SVC(), tuned_parameters, cv=10,
 		               scoring='accuracy', refit = True)
 
 		self.cv.fit(X, y)
@@ -140,5 +141,5 @@ class SVMModelParameterEstimator(BaseClassifier):
 		return stats
 
 	def desc(self):
-		return 'SVM Model Parameter Estimator'.format(self.best_params)
+		return 'SVM Model Parameter Estimator {}'.format(utils.dictprint(self.best_params))
 

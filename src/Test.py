@@ -7,6 +7,12 @@ import utils
 
 def main():
 
+	f = "{'2' : [1, 2], 'b' : [3, 3]}"
+	print('_dd'.startswith('_'))
+
+
+	print(dict(f))
+
 	# utils.load_all_modules_from_dir('feature',exclusions=['FeatureSelector'])
 	# values = utils.load_all_modules_from_dir('.',exclusions=[]) #['BaseClassifier', 'FeatureSelector'])
 	# print(locals())
@@ -51,7 +57,7 @@ def main():
 	# for i in value:
 	# 	print(i)
 
-	print(utils.replace_with_('i d dd'))
+	# print(utils.replace_with_('i d dd'))
 
 if __name__ == "__main__":
     main()

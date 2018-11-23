@@ -92,7 +92,7 @@ class ForwardFixedSetSelector(FeatureSelector):
 
 	def __init__(self):
 		super(ForwardFixedSetSelector, self).__init__()
-		self.fixed_set_size = 100
+		self.fixed_set_size = 200
 
 	def select(self, params=None):
 		
@@ -133,8 +133,11 @@ class FixedSetSelector(FeatureSelector):
 	def select(self, params=None):
 		self.best_feature_file = params['feature_file'] if params is not None and 'feature_file' in params else self.best_feature_file	
 		value = utils.load_string_data(self.best_feature_file)
-		self.features = []
-		self.features.append(value)
+		if not isinstance(value[0], np.ndarray):
+			self.features = []
+			self.features.append(value)
+		else:
+			self.features = value
 
 	def training_data(self):
 		X, Y = self.data.for_train().gene_data()	
@@ -231,5 +234,52 @@ class SingleFeatureSelector(FeatureSelector):
 
 	def desc(self):
 		return 'Single Feature Selector'
+
+class SkipOneFeatureSelector(FeatureSelector):
+
+	def __init__(self):
+		super(SkipOneFeatureSelector, self).__init__()
+
+	def select(self, params=None):
+		
+		if bool(params) and 'feature_file' in params:
+			feature_file = params['feature_file']
+			features = utils.load_string_data(feature_file)
+
+			if 'index' in params:
+				self.set_idx = params['index']
+			else:
+				self.set_idx = 0
+
+			features = features[self.set_idx]
+		else:			
+			raise 'Feature file name not specified'
+
+		self.features = self._create_featurelist(features)
+
+	def _create_featurelist(self, features):
+
+		temp = []
+		
+		for i in range(0, len(features)):
+			feat = []
+			feat.extend(features)
+			feat.pop(i)
+
+			temp.append(feat)
+
+		featurelist = temp
+		return featurelist		
+
+	def training_data(self):
+		X, Y = self.data.for_train().gene_data()	
+		return ((X.filter(items=f, axis=0), Y) for f in self.features)
+
+	def test_data(self):	
+		X, Y = self.data.for_test().gene_data()	
+		return ((X.filter(items=f, axis=0), Y) for f in self.features)
+
+	def desc(self):
+		return 'Skip One Feature Selector from set {}'.format(self.set_idx)
 
 
