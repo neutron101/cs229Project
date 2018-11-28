@@ -19,12 +19,14 @@ def main():
 
 	from pydoc import locate
 	#add a new feature reduction class
- 	mlf.install_feature_selectors(locate('forward_backward_feature_selector.ForwardBackwardSelector'))
+ 	mlf.install_feature_selectors(locate('forward_backward_feature_selector.ForwardSelector'))
+ 	mlf.install_feature_selectors(locate('forward_backward_feature_selector.BackwardSelector'))
  	mlf.install_feature_selectors(locate('forward_backward_feature_selector.RandomLimitedFeatureSelector'))
  	mlf.install_feature_selectors(locate('forward_backward_feature_selector.ForwardFixedSetSelector'))
  	mlf.install_feature_selectors(locate('forward_backward_feature_selector.FixedSetSelector'))
  	mlf.install_feature_selectors(locate('forward_backward_feature_selector.PCAFeatureSelector'))
  	mlf.install_feature_selectors(locate('forward_backward_feature_selector.SingleFeatureSelector'))
+ 	mlf.install_feature_selectors(locate('forward_backward_feature_selector.SkipOneFeatureSelector'))
  	
  	# ###################
  	#add classifier to classifer choices
@@ -65,13 +67,22 @@ def model_selection(feature_selector, classifier, dataset, write_filename=None):
 
 	feature_selector.attach_dataset(dataset)
 
-	if write_filename is not None:
-		write_filename = write_filename+'_'+classifier.desc()+'_'+feature_selector.desc()
-
 	feature_sel_name = feature_selector.__class__.__name__
 	classifier_name = classifier.__class__.__name__
 
-	sel_params_list = config.get('model_selector_params').get(feature_sel_name) if config.get('model_selector_params').get(feature_sel_name) is not None else [{}]
+	base_filename = write_filename
+
+	exec_mode = 'manytomany'
+	if '_exec_mode' in config.get('model_classifier_params'):
+		exec_mode = config.get('model_classifier_params').get('_exec_mode')
+
+
+	if '_iter' in config.get('model_selector_params').get(feature_sel_name):
+		_sel_params = config.get('model_selector_params').get(feature_sel_name).get('_iter')
+	else:		
+		_sel_params = [config.get('model_selector_params').get(feature_sel_name)] if config.get('model_selector_params').get(feature_sel_name) is not None else [{}]
+
+
 	cl_params_list = config.get('model_classifier_params').get(classifier_name) if config.get('model_classifier_params').get(classifier_name) is not None else [{}]
 
 	all_classifier_stats = Stats()
@@ -80,20 +91,33 @@ def model_selection(feature_selector, classifier, dataset, write_filename=None):
 		classifier_stats = Stats()
 
 		best=[]
-		for feature_param in sel_params_list:	
 			
-			feature_selector.select(feature_param)
+		if exec_mode == 'one2one':
+			sel_params = [_sel_params.next()]
+		else:
+			sel_params = _sel_params
+
+		for sel_param in sel_params:
+
+			feature_selector.select(sel_param)
 
 			f_idx = 0
 			for data in feature_selector.training_data():
 				f_idx = f_idx+1
-				stats = Stats.run_timed(lambda :classifier.fit(data, cl_param), filename=write_filename)
-				
-				print('Finished model selection with classifer "{}" with feature selector "{}"'.format(classifier.desc(), feature_selector.desc()))
+				stats = Stats.run_timed(lambda :classifier.fit(data, cl_param))
 
-				stats.set_printheader(stat_header({'FeatureCount':data[0].shape[0], 'Set':f_idx}, classifier.desc()))
-				stats.mystats(filename=write_filename, cond=lambda s: s.conf_based_stats()[0]>0)
+				if base_filename is not None:
+					write_filename = base_filename+'_'+classifier.desc()+'_'+feature_selector.desc()
+
 				classifier_stats.add_classifier_stat(stats)
+				feature_selector.eval(stats)
+
+				print('Finished model selection with classifer "{}" with {} feature selector "{}"'.format(classifier.desc(), f_idx, feature_selector.desc()))
+				
+				stats.set_printheader(stat_header({'FeatureCount':data[0].shape[0], 'Set':f_idx}, classifier.desc()))
+				# cond = lambda s: s.conf_based_stats()[1] > .70 and (1-s.conf_based_stats()[2]) < .35
+				cond = None
+				stats.mystats(filename=write_filename, cond=cond)
 
 				## Thresholding for good feature set selection which will be saved later
 				if stats.conf_based_stats()[1] > .70 and (1-stats.conf_based_stats()[2]) < .35:
@@ -102,9 +126,14 @@ def model_selection(feature_selector, classifier, dataset, write_filename=None):
 					best.append(fea)
 
 				stats.add_metric(stats.conf_based_stats()[0], 'Accuracy')
+				stats.add_metric(stats.conf_based_stats()[3], 'f1-score')
 
+			feature_selector.eval_set()
+
+			#save the best features to file
 			utils.save_string_data(os.path.join(config.get('output_dir'), config.get('best_features_file')), best)
 
+			#save the plot to file
 			if write_filename is not None:
 				classifier_stats.classifier_stats(filename=utils.replace_with_(write_filename), title='{} \n {}'.format(classifier.desc(),feature_selector.desc()))
 
@@ -117,20 +146,37 @@ def test(feature_selector, classifier, dataset, write_filename=None):
 
 	feature_selector.attach_dataset(dataset)
 
+	base_filename = write_filename
+
 	feature_sel_name = feature_selector.__class__.__name__
 	classifier_name = classifier.__class__.__name__
 
-	sel_params_list = config.get('test_selector_params').get(feature_sel_name) if config.get('test_selector_params').get(feature_sel_name) is not None else [{}]
+	exec_mode = 'manytomany'
+	if '_exec_mode' in config.get('test_classifier_params'):
+		exec_mode = config.get('test_classifier_params').get('_exec_mode')
+
+
+	if '_iter' in config.get('test_selector_params').get(feature_sel_name):
+		_sel_params = config.get('test_selector_params').get(feature_sel_name).get('_iter')
+	else:		
+		_sel_params = [config.get('test_selector_params').get(feature_sel_name)] if config.get('test_selector_params').get(feature_sel_name) is not None else [{}]
+
+
 	cl_params_list = config.get('test_classifier_params').get(classifier_name) if config.get('test_classifier_params').get(classifier_name) is not None else [{}]
 
 	all_classifier_stats = Stats()
 	for cl_param in cl_params_list:
 
 		classifier_stats = Stats()
-
-		for feature_param in sel_params_list:	
 			
-			feature_selector.select(feature_param)
+		if exec_mode == 'one2one':
+			sel_params = [_sel_params.next()]
+		else:
+			sel_params = _sel_params
+
+		for sel_param in sel_params:
+
+			feature_selector.select(sel_param)
 
 			test_data_gen = feature_selector.test_data()		
 
@@ -138,7 +184,11 @@ def test(feature_selector, classifier, dataset, write_filename=None):
 			for data in feature_selector.training_data():
 				f_idx = f_idx+1 
 
-				Stats.run_timed(lambda :classifier.fit(data, cl_param), filename=write_filename)
+				st = Stats.run_timed(lambda :classifier.fit(data, cl_param))
+
+				if base_filename is not None:
+					write_filename = base_filename+'_'+classifier.desc()+'_'+feature_selector.desc()
+
 				
 				print('Finished testing with classifer "{}" with feature selector "{}"'.format(classifier.desc(), feature_selector.desc()))
 
@@ -148,7 +198,9 @@ def test(feature_selector, classifier, dataset, write_filename=None):
 				stats.record_confusion_matrix(test_data[1])
 
 				#writes data to a file/console if the optional condition is true
-				stats.mystats(filename=write_filename, cond=lambda s: s.conf_based_stats()[0]>.5)
+				cond = lambda s: s.conf_based_stats()[0]>.6
+				cond = None
+				stats.mystats(filename=write_filename, cond=cond)
 
 				classifier_stats.add_classifier_stat(stats)
 

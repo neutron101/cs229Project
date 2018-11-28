@@ -23,9 +23,11 @@ class Stats(object):
 	
 		if cond is None or cond is not None and cond(self):
 			myprint('-------------Statistics-------------------------------------\n', filename)
+			if '_time' in self.metrics:
+				myprint('Time lapsed: {} secs.\n'.format(self.metrics['_time']),filename)
 			myprint(self.header, filename)
 
-			myprint('Accuracy={d[0]:3.6f} Sensitivity={d[1]:3.3f} Specificity={d[2]:3.3f} f1_score={d[3]:3.3f} \n'.format(d=self.conf_based_stats()),filename)
+			myprint('Accuracy={d[0]:3.6f} Sensitivity={d[1]:3.3f} Specificity={d[2]:3.3f} f1_score={d[3]:3.3f} my_score={d[4]:3.3f}  \n'.format(d=self.conf_based_stats()),filename)
 			myprint('Confusion matrix: tn={d[0]:02.4f}, fp={d[1]:02.4f}, fn={d[2]:02.4f}, tp={d[3]:02.4f} \n'.format(d=self.cnf_matrix.ravel()),filename)				
 			myprint('Normalized Confusion matrix: tn={d[0]:02.4f}, fp={d[1]:02.4f}, fn={d[2]:02.4f}, tp={d[3]:02.4f} \n'.format(d=self.cnf_matrix_norm.ravel()),filename)
 
@@ -44,16 +46,17 @@ class Stats(object):
 
 				if bool(st.metrics):
 					for key, value in st.metrics.items():
-						if key not in metrics:
-							metrics[key] = []
-						metrics[key].append(value)
+						if not key.startswith('_'):
+							if key not in metrics:
+								metrics[key] = []
+							metrics[key].append(value)
 
 			if len(sensitivity) > 0 and len(specificity) > 0:
-				pu.plotline(specificity, sensitivity, filename, '1-Specificity', 'Sensitivity', title)
+				pu.plotscatter(specificity, sensitivity, filename, '1-Specificity', 'Sensitivity', title)
 
 			if bool(metrics):
-				for key, values in metrics.items():
-					pu.plotline(np.linspace(1,len(values), num=len(values)), values, filename+'_'+key, 'Set', key, key)
+				pu.plotscatter(np.linspace(1,len(metrics.values()[0]), len(metrics.values()[0])), \
+					metrics.values(), filename+'_'+key, 'Set', metrics.keys(), 'Metrics')
 				
 
 	def classifiers_stats(self, filename=None):
@@ -64,13 +67,12 @@ class Stats(object):
 		self.predictions = predictions
 
 	@classmethod
-	def run_timed(cl,op,filename=None,verbose=False):
+	def run_timed(cl,op,verbose=False):
 		start = datetime.now()
 		result = Stats.run(op)
 		duration = datetime.now() - start
 
-		myprint('Time lapsed: {} secs.\n'.format(duration),filename)
-
+		result.add_metric('{} secs'.format(duration), '_time')
 		return result
 
 	def record_confusion_matrix(self, true):
@@ -99,7 +101,13 @@ class Stats(object):
 		precision = tp/(tp+fp)
 		f1_score = (2*precision*sensitivity)/(precision+sensitivity)
 
-		my_score = (tp+tn)/fn
+		tp = tp+1
+		tn = tn+1
+		fn = fn+1
+		a = (tp)/(tp+tn)
+		my_score = (a*(1-a)*(tp+tn))/(fn)
+
+		my_score = ((a*(1-a)*(tp+tn))/(fn))/(tp+fn+tn)
 
 		return accuracy, sensitivity, specificity, f1_score, my_score
 

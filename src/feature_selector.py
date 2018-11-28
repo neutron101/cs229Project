@@ -9,6 +9,15 @@ class FeatureSelector(object):
 	def select(self, params=None):
 		 raise NotImplementedError
 
+	def eval(self, stat):
+		pass
+
+	def eval_set(self):
+		pass
+
+	def eval_allsets(self):
+		pass
+
 	def training_data(self):	
 		raise NotImplementedError
 
