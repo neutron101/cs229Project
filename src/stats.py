@@ -27,7 +27,7 @@ class Stats(object):
 				myprint('Time lapsed: {} secs.\n'.format(self.metrics['_time']),filename)
 			myprint(self.header, filename)
 
-			myprint('Accuracy={d[0]:3.6f} Sensitivity={d[1]:3.3f} Specificity={d[2]:3.3f} f1_score={d[3]:3.3f} \n'.format(d=self.conf_based_stats()),filename)
+			myprint('Accuracy={d[0]:3.6f} Sensitivity={d[1]:3.3f} Specificity={d[2]:3.3f} f1_score={d[3]:3.3f} my_score={d[4]:3.3f}  \n'.format(d=self.conf_based_stats()),filename)
 			myprint('Confusion matrix: tn={d[0]:02.4f}, fp={d[1]:02.4f}, fn={d[2]:02.4f}, tp={d[3]:02.4f} \n'.format(d=self.cnf_matrix.ravel()),filename)				
 			myprint('Normalized Confusion matrix: tn={d[0]:02.4f}, fp={d[1]:02.4f}, fn={d[2]:02.4f}, tp={d[3]:02.4f} \n'.format(d=self.cnf_matrix_norm.ravel()),filename)
 
@@ -101,7 +101,13 @@ class Stats(object):
 		precision = tp/(tp+fp)
 		f1_score = (2*precision*sensitivity)/(precision+sensitivity)
 
-		my_score = (tp+tn)/fn if fn>0 else 0
+		tp = tp+1
+		tn = tn+1
+		fn = fn+1
+		a = (tp)/(tp+tn)
+		my_score = (a*(1-a)*(tp+tn))/(fn)
+
+		my_score = ((a*(1-a)*(tp+tn))/(fn))/(tp+fn+tn)
 
 		return accuracy, sensitivity, specificity, f1_score, my_score
 

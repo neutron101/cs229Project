@@ -41,7 +41,30 @@ def save_string_data(filename, matx):
 	np.savetxt(filename, matx, fmt="%s", delimiter='||')
 
 def dictprint(dictvalues):
-	return ", ".join("{}={}".format(k, v) for k, v in dictvalues.items())
+	return ", ".join("{}={}".format(k, v) for k, v in dictvalues.items()) if dictvalues is not None else ""
 
 def replace_with_(str):
 	return str.replace(' ', '_')
+
+def read_feature_set(params):
+
+	if bool(params) and 'feature_file' in params:
+		feature_file = params['feature_file']
+		value = load_string_data(feature_file)
+
+		set_idx = -1
+		if not isinstance(value[0], np.ndarray):
+			features = []
+			features.append(value)
+		else:
+			if 'index' in params:
+				set_idx = params['index']
+	
+			if set_idx != -1:
+				features = [value[set_idx]]
+
+		return features, set_idx, feature_file
+
+	else:			
+		raise Exception('Feature file name not specified: ' + dictprint(params))
+
