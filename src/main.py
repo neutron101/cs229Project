@@ -54,10 +54,10 @@ def main():
 		#setup feaure selector and classifier
 		f_sel, c_sel = map_impl(feature_sel, classifier)
 		if modeling:
-			output_filename = 'model_{}'.format(output_filename)
+			output_filename = 'model_{}'.format(output_filename) if output_filename is not None else output_filename 
 			stats = model_selection(f_sel, c_sel, dataset, write_filename=output_filename)
 		else:
-			output_filename = 'test_{}'.format(output_filename)
+			output_filename = 'test_{}'.format(output_filename) if output_filename is not None else output_filename
 			stats = test(f_sel, c_sel, dataset, write_filename=output_filename)
 	###################
 
@@ -89,8 +89,6 @@ def model_selection(feature_selector, classifier, dataset, write_filename=None):
 	for cl_param in cl_params_list:
 
 		classifier_stats = Stats()
-
-		best=[]
 			
 		if exec_mode == 'one2one':
 			sel_params = [_sel_params.next()]
@@ -100,8 +98,9 @@ def model_selection(feature_selector, classifier, dataset, write_filename=None):
 		for sel_param in sel_params:
 
 			feature_selector.select(sel_param)
-
+			best=[]
 			f_idx = 0
+
 			for data in feature_selector.training_data():
 				f_idx = f_idx+1
 				stats = Stats.run_timed(lambda :classifier.fit(data, cl_param))
@@ -130,12 +129,17 @@ def model_selection(feature_selector, classifier, dataset, write_filename=None):
 
 			feature_selector.eval_set()
 
-			#save the best features to file
-			utils.save_string_data(os.path.join(config.get('output_dir'), config.get('best_features_file')), best)
-
 			#save the plot to file
 			if write_filename is not None:
 				classifier_stats.classifier_stats(filename=utils.replace_with_(write_filename), title='{} \n {}'.format(classifier.desc(),feature_selector.desc()))
+				best_filename = config.get('best_features_file')+'_'+utils.replace_with_(write_filename)
+			else:
+				best_filename = utils.replace_with_(config.get('best_features_file'))
+
+			#save the best features to file
+			utils.save_string_data(os.path.join(config.get('output_dir'), best_filename), best[-1])
+
+
 
 		all_classifier_stats.add_classifiers_stat(classifier_stats, classifier.desc())
 

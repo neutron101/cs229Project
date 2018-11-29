@@ -1,0 +1,35 @@
+-------------Statistics-------------------------------------
+Time lapsed: ['0:22:31.247419 secs'] secs.
+Selector: Set=4, FeatureCount=200 with SVM Model Parameter Estimator kernel=rbf, C=1, gamma=0.5.
+Accuracy=0.778409 Sensitivity=0.811 Specificity=0.744 f1_score=0.789 
+Confusion matrix: tn=128.0000, fp=44.0000, fn=34.0000, tp=146.0000 
+Normalized Confusion matrix: tn=0.7442, fp=0.2558, fn=0.1889, tp=0.8111 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:02:46.674303 secs'] secs.
+Selector: Set=18, FeatureCount=200 with SVM Model Parameter Estimator kernel=rbf, C=1, gamma=0.5.
+Accuracy=0.778409 Sensitivity=0.839 Specificity=0.715 f1_score=0.795 
+Confusion matrix: tn=123.0000, fp=49.0000, fn=29.0000, tp=151.0000 
+Normalized Confusion matrix: tn=0.7151, fp=0.2849, fn=0.1611, tp=0.8389 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:02:24.840536 secs'] secs.
+Selector: Set=22, FeatureCount=200 with SVM Model Parameter Estimator kernel=rbf, C=1, gamma=0.5.
+Accuracy=0.786932 Sensitivity=0.861 Specificity=0.709 f1_score=0.805 
+Confusion matrix: tn=122.0000, fp=50.0000, fn=25.0000, tp=155.0000 
+Normalized Confusion matrix: tn=0.7093, fp=0.2907, fn=0.1389, tp=0.8611 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:03:07.916903 secs'] secs.
+Selector: Set=29, FeatureCount=200 with SVM Model Parameter Estimator kernel=rbf, C=1, gamma=0.5.
+Accuracy=0.789773 Sensitivity=0.839 Specificity=0.738 f1_score=0.803 
+Confusion matrix: tn=127.0000, fp=45.0000, fn=29.0000, tp=151.0000 
+Normalized Confusion matrix: tn=0.7384, fp=0.2616, fn=0.1611, tp=0.8389 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:02:16.646855 secs'] secs.
+Selector: Set=32, FeatureCount=200 with SVM Model Parameter Estimator kernel=rbf, C=1, gamma=0.5.
+Accuracy=0.826705 Sensitivity=0.911 Specificity=0.738 f1_score=0.843 
+Confusion matrix: tn=127.0000, fp=45.0000, fn=16.0000, tp=164.0000 
+Normalized Confusion matrix: tn=0.7384, fp=0.2616, fn=0.0889, tp=0.9111 
+------------------------------------------------------------

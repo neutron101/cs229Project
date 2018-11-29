@@ -11,7 +11,7 @@ import numpy  as np
 
 def myprint(str, filename=None):
 	if filename is not None:
-		with open(os.path.join(cs.output_dir, filename), 'a') as f:
+		with open(os.path.join(cs.output_dir, replace_with_(filename)), 'a') as f:
 			f.write(str)
 	else:
 		print(str)
@@ -44,7 +44,7 @@ def dictprint(dictvalues):
 	return ", ".join("{}={}".format(k, v) for k, v in dictvalues.items()) if dictvalues is not None else ""
 
 def replace_with_(str):
-	return str.replace(' ', '_')
+	return str.replace(' ', '_').replace('/', '_').replace('.','_')
 
 def read_feature_set(params):
 

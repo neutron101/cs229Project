@@ -3,7 +3,8 @@ import numpy as np
 import random
 import utils
 
-acc_epsilon = .1e-3
+acc_epsilon = 0
+b_acc_epsilon = .001
 
 class ForwardSelector(FeatureSelector):
 
@@ -35,14 +36,15 @@ class ForwardSelector(FeatureSelector):
 
 	def eval(self, stats):
 		if self.prev is None:
-			score = stats.conf_based_stats()[0]
+			score = np.NINF
 		else:
 			score = self.prev.conf_based_stats()[0] - stats.conf_based_stats()[0]
 
-		self.prev = stats
 		# metric went up which is good
-		if score <= acc_epsilon:
+		if score >= (0-acc_epsilon):
 			self.current_features = self.current_features[0:-1]
+		else:
+			self.prev = stats	
 
 		self._create_featurelist()
 
@@ -85,7 +87,7 @@ class BackwardSelector(FeatureSelector):
 
 		self.current_features = list(self.features)
 		self.current_feature = len(self.features)
-		self.working_set = None
+		self.working_set = self.current_features
 		self.prev = None
 
 
@@ -94,21 +96,22 @@ class BackwardSelector(FeatureSelector):
 		if self.current_feature-1 >= 0:
 			self.current_feature = self.current_feature-1
 			self.prev_set = list(self.current_features)
-			self.working_set = self.prev_set
+			self.working_set = self.current_features
 			self.working_set.pop(self.current_feature)
 		else:
 			self.working_set = []
 
 	def eval(self, stats):
 		if self.prev is None:
-			score = stats.conf_based_stats()[0]
+			score = np.NINF
 		else:
 			score = self.prev.conf_based_stats()[0] - stats.conf_based_stats()[0]
-
-		self.prev = stats
+		print('score', score)
 		# metric went up which is good
-		if score >= acc_epsilon:
+		if score >= (0+b_acc_epsilon):
 			self.current_features = self.prev_set
+		else:
+			self.prev = stats
 
 		self._create_featurelist()
 
@@ -123,12 +126,10 @@ class BackwardSelector(FeatureSelector):
 
 
 	def training_data(self):
-		self._create_featurelist()
 		X, Y = self.data.for_train().gene_data()
 		return self.def_gen(X, Y)
 
 	def test_data(self):
-		self._create_featurelist()
 		X, Y = self.data.for_test().gene_data()
 		return self.def_gen(X, Y)
 
@@ -248,7 +249,7 @@ class PCAFeatureSelector(FeatureSelector):
 			features = utils.load_string_data(feature_file)
 			X = X.filter(items=features, axis=0)
 
-		data = X.values 
+		data = X.values.T
 		print('Gene data size {}'.format(data.shape))
 		
 		from sklearn.decomposition import PCA

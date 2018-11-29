@@ -1,0 +1,21 @@
+-------------Statistics-------------------------------------
+Time lapsed: ['0:02:38.370396 secs'] secs.
+Selector: Set=6, FeatureCount=200 with SVM Model Parameter Estimator kernel=rbf, C=10, gamma=0.1.
+Accuracy=0.784091 Sensitivity=0.794 Specificity=0.773 f1_score=0.790 
+Confusion matrix: tn=133.0000, fp=39.0000, fn=37.0000, tp=143.0000 
+Normalized Confusion matrix: tn=0.7733, fp=0.2267, fn=0.2056, tp=0.7944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:02:54.013506 secs'] secs.
+Selector: Set=30, FeatureCount=200 with SVM Model Parameter Estimator kernel=rbf, C=10, gamma=0.1.
+Accuracy=0.812500 Sensitivity=0.828 Specificity=0.797 f1_score=0.819 
+Confusion matrix: tn=137.0000, fp=35.0000, fn=31.0000, tp=149.0000 
+Normalized Confusion matrix: tn=0.7965, fp=0.2035, fn=0.1722, tp=0.8278 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:02:24.014947 secs'] secs.
+Selector: Set=35, FeatureCount=200 with SVM Model Parameter Estimator kernel=rbf, C=10, gamma=0.1.
+Accuracy=0.832386 Sensitivity=0.867 Specificity=0.797 f1_score=0.841 
+Confusion matrix: tn=137.0000, fp=35.0000, fn=24.0000, tp=156.0000 
+Normalized Confusion matrix: tn=0.7965, fp=0.2035, fn=0.1333, tp=0.8667 
+------------------------------------------------------------

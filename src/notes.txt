@@ -1,0 +1,136 @@
+Loaded data for 3821 genes. Examples: ['cg00009553', 'cg00017475', 'cg00018539', 'cg00019576']....
+Loaded data for 440 patients. Examples: ['NS002LY', 'NS004LY', 'NS007LY', 'NS008LY']....
+Loaded clinial data with 135 features. Examples: ['id' 'biobank_code' 'date_chipanalysis' 'cohort']....
+Finished testing with classifer "SVM kernel=rbf, C=3.0, coef0=0.0, degree=0.0, gamma=0.5" with feature selector "Fixed Set Selector from ../output/BESTSVM_kernel=rbf,_C=3.0,_coef0=0.0,_degree=0.0,_gamma=0.5_Forward_Selector_0_genes at -1"
+-------------Statistics-------------------------------------
+
+Selector: Set=1, FeatureCount=37 with SVM kernel=rbf, C=3.0, coef0=0.0, degree=0.0, gamma=0.5.
+
+Accuracy=0.590909 Sensitivity=0.525 Specificity=0.646 f1_score=0.538 my_score=0.008809  
+
+Confusion matrix: tn=31.0000, fp=17.0000, fn=19.0000, tp=21.0000 
+
+Normalized Confusion matrix: tn=0.6458, fp=0.3542, fn=0.4750, tp=0.5250 
+
+------------------------------------------------------------
+
+Finito....
+(Project) DN0a229733:src sky$ python main.py 5 1 
+Loaded data for 3821 genes. Examples: ['cg00009553', 'cg00017475', 'cg00018539', 'cg00019576']....
+Loaded data for 440 patients. Examples: ['NS002LY', 'NS004LY', 'NS007LY', 'NS008LY']....
+Loaded clinial data with 135 features. Examples: ['id' 'biobank_code' 'date_chipanalysis' 'cohort']....
+Finished testing with classifer "SVM kernel=rbf, C=1.0, coef0=0.0, degree=0.0, gamma=1.5" with feature selector "Fixed Set Selector from ../output/BESTSVM_kernel=rbf,_C=1.0,_coef0=0.0,_degree=0.0,_gamma=1.5_Forward_Selector_0_genes at -1"
+-------------Statistics-------------------------------------
+
+Selector: Set=1, FeatureCount=30 with SVM kernel=rbf, C=1.0, coef0=0.0, degree=0.0, gamma=1.5.
+
+Accuracy=0.613636 Sensitivity=0.575 Specificity=0.646 f1_score=0.575 my_score=0.010296  
+
+Confusion matrix: tn=31.0000, fp=17.0000, fn=17.0000, tp=23.0000 
+
+Normalized Confusion matrix: tn=0.6458, fp=0.3542, fn=0.4250, tp=0.5750 
+
+------------------------------------------------------------
+
+Finito....
+(Project) DN0a229733:src sky$ python main.py 5 1 
+Loaded data for 3821 genes. Examples: ['cg00009553', 'cg00017475', 'cg00018539', 'cg00019576']....
+Loaded data for 440 patients. Examples: ['NS002LY', 'NS004LY', 'NS007LY', 'NS008LY']....
+Loaded clinial data with 135 features. Examples: ['id' 'biobank_code' 'date_chipanalysis' 'cohort']....
+Finished testing with classifer "SVM kernel=rbf, C=1.0, coef0=0.0, degree=0.0, gamma=1.0" with feature selector "Fixed Set Selector from ../output/BESTSVM_kernel=rbf,_C=1.0,_coef0=0.0,_degree=0.0,_gamma=1.0_Forward_Selector_0_genes at -1"
+-------------Statistics-------------------------------------
+
+Selector: Set=1, FeatureCount=29 with SVM kernel=rbf, C=1.0, coef0=0.0, degree=0.0, gamma=1.0.
+
+Accuracy=0.647727 Sensitivity=0.625 Specificity=0.667 f1_score=0.617 my_score=0.012119  
+
+Confusion matrix: tn=32.0000, fp=16.0000, fn=15.0000, tp=25.0000 
+
+Normalized Confusion matrix: tn=0.6667, fp=0.3333, fn=0.3750, tp=0.6250 
+
+------------------------------------------------------------
+Loaded data for 3821 genes. Examples: ['cg00009553', 'cg00017475', 'cg00018539', 'cg00019576']....
+Loaded data for 440 patients. Examples: ['NS002LY', 'NS004LY', 'NS007LY', 'NS008LY']....
+Loaded clinial data with 135 features. Examples: ['id' 'biobank_code' 'date_chipanalysis' 'cohort']....
+Finished testing with classifer "SVM kernel=rbf, C=1.0, coef0=0.0, degree=0.0, gamma=1.0" with feature selector "Fixed Set Selector from ../output/BEST_model__all_genes__SVM_kernel=rbf,_C=1.0,_coef0=0.0,_degree=0.0,_gamma=1.0_Forward_Selector_0_genes at -1"
+-------------Statistics-------------------------------------
+
+Selector: Set=1, FeatureCount=39 with SVM kernel=rbf, C=1.0, coef0=0.0, degree=0.0, gamma=1.0.
+
+Accuracy=0.636364 Sensitivity=0.600 Specificity=0.667 f1_score=0.600 my_score=0.011156  
+
+Confusion matrix: tn=32.0000, fp=16.0000, fn=16.0000, tp=24.0000 
+
+Normalized Confusion matrix: tn=0.6667, fp=0.3333, fn=0.4000, tp=0.6000 
+
+------------------------------------------------------------
+
+Finito....
+Loaded data for 3821 genes. Examples: ['cg00009553', 'cg00017475', 'cg00018539', 'cg00019576']....
+Loaded data for 440 patients. Examples: ['NS002LY', 'NS004LY', 'NS007LY', 'NS008LY']....
+Loaded clinial data with 135 features. Examples: ['id' 'biobank_code' 'date_chipanalysis' 'cohort']....
+Finished testing with classifer "SVM kernel=rbf, C=1.0, coef0=0.0, degree=0.0, gamma=1.5" with feature selector "Fixed Set Selector from ../output/BEST_model__all_genes__SVM_kernel=rbf,_C=1.0,_coef0=0.0,_degree=0.0,_gamma=1.5_Forward_Selector_0_genes at -1"
+-------------Statistics-------------------------------------
+
+Selector: Set=1, FeatureCount=31 with SVM kernel=rbf, C=1.0, coef0=0.0, degree=0.0, gamma=1.5.
+
+Accuracy=0.613636 Sensitivity=0.625 Specificity=0.604 f1_score=0.595 my_score=0.012091  
+
+Confusion matrix: tn=29.0000, fp=19.0000, fn=15.0000, tp=25.0000 
+
+Normalized Confusion matrix: tn=0.6042, fp=0.3958, fn=0.3750, tp=0.6250 
+
+------------------------------------------------------------
+
+Finito....
+Loaded data for 3821 genes. Examples: ['cg00009553', 'cg00017475', 'cg00018539', 'cg00019576']....
+Loaded data for 440 patients. Examples: ['NS002LY', 'NS004LY', 'NS007LY', 'NS008LY']....
+Loaded clinial data with 135 features. Examples: ['id' 'biobank_code' 'date_chipanalysis' 'cohort']....
+Finished testing with classifer "SVM kernel=rbf, C=3.0, coef0=0.0, degree=0.0, gamma=0.5" with feature selector "Fixed Set Selector from ../output/BEST_model__all_genes__SVM_kernel=rbf,_C=3.0,_coef0=0.0,_degree=0.0,_gamma=0.5_Forward_Selector_0_genes at -1"
+-------------Statistics-------------------------------------
+
+Selector: Set=1, FeatureCount=31 with SVM kernel=rbf, C=3.0, coef0=0.0, degree=0.0, gamma=0.5.
+
+Accuracy=0.659091 Sensitivity=0.650 Specificity=0.667 f1_score=0.634 my_score=0.013200  
+
+Confusion matrix: tn=32.0000, fp=16.0000, fn=14.0000, tp=26.0000 
+
+Normalized Confusion matrix: tn=0.6667, fp=0.3333, fn=0.3500, tp=0.6500 
+
+------------------------------------------------------------
+
+Finito....
+Loaded data for 3821 genes. Examples: ['cg00009553', 'cg00017475', 'cg00018539', 'cg00019576']....
+Loaded data for 440 patients. Examples: ['NS002LY', 'NS004LY', 'NS007LY', 'NS008LY']....
+Loaded clinial data with 135 features. Examples: ['id' 'biobank_code' 'date_chipanalysis' 'cohort']....
+Finished testing with classifer "SVM kernel=poly, C=3.0, coef0=0.0, degree=2.0, gamma=0.1" with feature selector "Fixed Set Selector from target_features_11_18_23_combined-forwardselected at -1"
+-------------Statistics-------------------------------------
+
+Selector: Set=1, FeatureCount=157 with SVM kernel=poly, C=3.0, coef0=0.0, degree=2.0, gamma=0.1.
+
+Accuracy=0.613636 Sensitivity=0.550 Specificity=0.667 f1_score=0.564 my_score=0.009511  
+
+Confusion matrix: tn=32.0000, fp=16.0000, fn=18.0000, tp=22.0000 
+
+Normalized Confusion matrix: tn=0.6667, fp=0.3333, fn=0.4500, tp=0.5500 
+
+------------------------------------------------------------
+
+Finito....
+Loaded data for 3821 genes. Examples: ['cg00009553', 'cg00017475', 'cg00018539', 'cg00019576']....
+Loaded data for 440 patients. Examples: ['NS002LY', 'NS004LY', 'NS007LY', 'NS008LY']....
+Loaded clinial data with 135 features. Examples: ['id' 'biobank_code' 'date_chipanalysis' 'cohort']....
+Finished testing with classifer "SVM kernel=rbf, C=1.0, coef0=0.0, degree=0.0, gamma=2.5" with feature selector "Fixed Set Selector from all_genes_combined-forwardselected at -1"
+-------------Statistics-------------------------------------
+
+Selector: Set=1, FeatureCount=84 with SVM kernel=rbf, C=1.0, coef0=0.0, degree=0.0, gamma=2.5.
+
+Accuracy=0.636364 Sensitivity=0.625 Specificity=0.646 f1_score=0.610 my_score=0.012116  
+
+Confusion matrix: tn=31.0000, fp=17.0000, fn=15.0000, tp=25.0000 
+
+Normalized Confusion matrix: tn=0.6458, fp=0.3542, fn=0.3750, tp=0.6250 
+
+------------------------------------------------------------
+
+Finito....

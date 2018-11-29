@@ -62,16 +62,29 @@ class FeatureSelectorSVM(BaseClassifier):
 
 	def __init__(self):
 		super(FeatureSelectorSVM, self).__init__()
-		self.kernel = 'rbf'
-		self.C = 1
-		self.gamma = 1.25
+		self.params = {'kernel': 'rbf', 'C': 1, 'gamma': 1.25, 'degree' : 0, 'coef0' : 0.0}
 		
 	def fit(self, data, params=None):
 
 		X, y = data
 		X = X.values.transpose()
 
-		self.classifier = SVC(kernel=self.kernel, C=self.C, gamma=self.gamma,verbose=False)
+		val = lambda d, key, default: d[key] if key in d else default
+		d = lambda l: val(params, l, self.params[l])
+		if bool(params):
+			self.params['kernel'] = d('kernel')
+			self.params['C'] = float(d('C'))
+			self.params['gamma'] = float(d('gamma'))
+			self.params['degree'] = float(d('degree'))
+			self.params['coef0'] = float(d('coef0'))
+
+
+		self.classifier = SVC(kernel=self.params['kernel'],\
+		 C=self.params['C'], \
+		  gamma=self.params['gamma'], \
+		  degree=self.params['degree'], \
+		  coef0=self.params['coef0'], \
+		  verbose=False)
 
 		results = cross_validate(self.classifier.fit(X, y), X, y,
                             scoring=self.conf_matrix_score, cv=5)
@@ -96,7 +109,7 @@ class FeatureSelectorSVM(BaseClassifier):
 		return stats
 
 	def desc(self):
-		return 'SVM {} kernel C={} gamma={}'.format(self.kernel, self.C, self.gamma)
+		return 'SVM {}'.format(utils.dictprint(self.params))
 
 
 class SVMModelParameterEstimator(BaseClassifier):
@@ -110,8 +123,8 @@ class SVMModelParameterEstimator(BaseClassifier):
 		X, y = data
 		X = X.values.transpose()
 
-		tuned_parameters = [{'kernel': ['rbf'], 'gamma': [0.1, 0.5, 1.25, 1, 1.5, 2],
-		             'C': [1, 3, 5, 7, 9]},
+		tuned_parameters = [{'kernel': ['rbf'], 'gamma': [0.1, 0.5, 1.25, 1, 1.5, 2, 2.5, 3, 3.5, 4],
+		             'C': [1, 3, 5, 7, 9, 11]},
 		            {'kernel': ['linear'], 'C': [1, 5, 10, 15]},
 		            {'kernel': ['poly'], 'C': [1, 3, 5, 7, 10], 'degree':[2,3,4], 'gamma': [0.1, 0.5, 1.25, 1, 1.5, 2], 'coef0' : [1,10,5]}]
 
