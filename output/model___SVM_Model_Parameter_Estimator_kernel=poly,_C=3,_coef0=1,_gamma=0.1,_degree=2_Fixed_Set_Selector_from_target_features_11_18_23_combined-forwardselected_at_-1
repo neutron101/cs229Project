@@ -1,0 +1,14 @@
+-------------Statistics-------------------------------------
+Time lapsed: ['0:02:17.797379 secs'] secs.
+Selector: Set=1, FeatureCount=157 with SVM Model Parameter Estimator kernel=poly, C=3, coef0=1, gamma=0.1, degree=2.
+Accuracy=0.852273 Sensitivity=0.889 Specificity=0.814 f1_score=0.860 my_score=0.011082  
+Confusion matrix: tn=140.0000, fp=32.0000, fn=20.0000, tp=160.0000 
+Normalized Confusion matrix: tn=0.8140, fp=0.1860, fn=0.1111, tp=0.8889 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:02:27.696923 secs'] secs.
+Selector: Set=1, FeatureCount=157 with SVM Model Parameter Estimator kernel=poly, C=3, coef0=1, gamma=0.1, degree=2.
+Accuracy=0.852273 Sensitivity=0.889 Specificity=0.814 f1_score=0.860 my_score=0.011082  
+Confusion matrix: tn=140.0000, fp=32.0000, fn=20.0000, tp=160.0000 
+Normalized Confusion matrix: tn=0.8140, fp=0.1860, fn=0.1111, tp=0.8889 
+------------------------------------------------------------

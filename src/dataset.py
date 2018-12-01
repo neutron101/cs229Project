@@ -5,6 +5,9 @@ import consts as cs
 from sklearn.model_selection import train_test_split
 from utils import myprint
 
+config = dict(globals(  ))
+execfile('consts.py', config)
+
 class Dataset(object):
 
 
@@ -17,7 +20,8 @@ class Dataset(object):
 		
 		df = pd.read_csv(gene_file_path, header=0, index_col=0)
 
-		self.gene_ids = list(df.axes[0].values)
+		cutoff = config.get('gene_cutoff')
+		self.gene_ids = list(df.axes[0].values[0:cutoff])
 		self.patient_ids = list(df.axes[1].values)
 		self.data = df.values
 

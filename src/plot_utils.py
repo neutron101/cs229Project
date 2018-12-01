@@ -44,12 +44,60 @@ def plot_confusion_matrix(self,cm, classes=['Cancer','Healthy'],
 
 def plotline(x, y, save_filename, xlabel, ylabel, title=None):
  
+    markers = ['.', ',', 'o', '^', '*', '+', '-', '>', '<', 'x']
+    markerfacecolors = ['orange', 'blue', 'green', 'red', 'purple', 'brown', 'pink', 'gray', 'olive', 'cyan']
+
+    if not isinstance(y, list):
+        print('Expecting a list of y values')
+        return
+
+    if len(y) > 0 and not isinstance(y[0], list):
+        y = [y]
+
+
     # Plot dataset
     plt.figure()
-    plt.plot(x, y, '.', linewidth=1)
+    index = 0
+    for ys in y:
+        plt.plot(x, ys, marker=markers[2], color=markerfacecolors[index], \
+            markersize=6, markerfacecolor=markerfacecolors[np.random.choice(10,1)[0]], \
+            label=ylabel, linestyle='-')
+        index = index + 1
+    
     plt.title(title)
+    plt.legend()
 
     # Add labels and save to disk
     plt.xlabel(xlabel)
-    plt.ylabel(ylabel)
     plt.savefig(os.path.join(cs.output_dir, save_filename)+'.png')
+
+
+def plotscatter(x, y, save_filename, xlabel, ylabel, title=None):
+ 
+    markers = ['.', ',', 'o', '^', '*', '+', '-', '>', '<', 'x']
+    markerfacecolors = ['orange', 'blue', 'green', 'red', 'purple', 'brown', 'pink', 'gray', 'olive', 'cyan']
+
+    if not isinstance(y, list):
+        print('Expecting a list of y values')
+        return
+
+    if len(y) > 0 and not isinstance(y[0], list):
+        y = [y]
+
+
+    # Plot dataset
+    plt.figure()
+    index = 0
+    for ys in y:
+        plt.scatter(x, ys, marker=markers[index], c=markerfacecolors[index], \
+            s=6, \
+            label=ylabel[index])
+        index = index + 1
+    
+    plt.title(title)
+    plt.legend()
+
+    # Add labels and save to disk
+    plt.xlabel(xlabel)
+    plt.savefig(os.path.join(cs.output_dir, save_filename)+'.png')
+

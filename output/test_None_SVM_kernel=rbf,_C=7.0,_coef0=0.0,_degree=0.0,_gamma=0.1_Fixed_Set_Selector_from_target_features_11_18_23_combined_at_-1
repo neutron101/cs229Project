@@ -1,0 +1,6 @@
+-------------Statistics-------------------------------------
+Selector: Set=1, FeatureCount=562 with SVM kernel=rbf, C=7.0, coef0=0.0, degree=0.0, gamma=0.1.
+Accuracy=0.704545 Sensitivity=0.675 Specificity=0.729 f1_score=0.675 my_score=0.014423  
+Confusion matrix: tn=35.0000, fp=13.0000, fn=13.0000, tp=27.0000 
+Normalized Confusion matrix: tn=0.7292, fp=0.2708, fn=0.3250, tp=0.6750 
+------------------------------------------------------------

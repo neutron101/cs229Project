@@ -1,0 +1,12 @@
+-------------Statistics-------------------------------------
+Selector: Set=1, FeatureCount=242 with SVM kernel=rbf, C=5.0, coef0=0.0, degree=0.0, gamma=0.1.
+Accuracy=0.727273 Sensitivity=0.650 Specificity=0.792 f1_score=0.684 my_score=0.013131  
+Confusion matrix: tn=38.0000, fp=10.0000, fn=14.0000, tp=26.0000 
+Normalized Confusion matrix: tn=0.7917, fp=0.2083, fn=0.3500, tp=0.6500 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Selector: Set=1, FeatureCount=242 with SVM kernel=rbf, C=5.0, coef0=0.0, degree=0.0, gamma=0.1.
+Accuracy=0.727273 Sensitivity=0.650 Specificity=0.792 f1_score=0.684 my_score=0.013131  
+Confusion matrix: tn=38.0000, fp=10.0000, fn=14.0000, tp=26.0000 
+Normalized Confusion matrix: tn=0.7917, fp=0.2083, fn=0.3500, tp=0.6500 
+------------------------------------------------------------
