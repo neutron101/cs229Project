@@ -79,6 +79,11 @@ def remove_near_zero_variance(x_train, x_test):
     nzv_x = x_train[x_train.columns[model.get_support(indices=True)]]
     nzv_x_test = x_test[x_test.columns[model.get_support(indices=True)]]
 
+    feature_space = x_train.columns[model.get_support(indices=True)]
+    output_dir = '../gene_set/'
+    filename = output_dir + 'non_zero_variance'
+    np.savetxt(filename, feature_space, fmt='%s')
+    print feature_space
     return nzv_x, nzv_x_test
 
 
@@ -166,21 +171,21 @@ def main():
 
     # Perform feature selection without removing near zero variance features first
     print('Running feature selection BEFORE non-zero variance reduction')
-    gene_set_dict = {}
-    gene_set_dict['lasso'] = lasso_feature_selection(x_train, y_train, x_test, y_test)
-    gene_set_dict['random_forest'] = rf_feature_selection(x_train, y_train, x_test, y_test)
-    gene_set_dict['boosting'] = gbm_feature_selection(x_train, y_train, x_test, y_test)
+    # gene_set_dict = {}
+    # gene_set_dict['lasso'] = lasso_feature_selection(x_train, y_train, x_test, y_test)
+    # gene_set_dict['random_forest'] = rf_feature_selection(x_train, y_train, x_test, y_test)
+    # gene_set_dict['boosting'] = gbm_feature_selection(x_train, y_train, x_test, y_test)
 
     # Perform feature selection after removing near zero variance features
     print('Running feature selection AFTER non-zero variance reduction')
     nzv_gene_set_dict = {}
     nzv_x_train, nzv_x_test = remove_near_zero_variance(x_train, x_test)
-    nzv_gene_set_dict['lasso'] = lasso_feature_selection(nzv_x_train, y_train, nzv_x_test, y_test)
-    nzv_gene_set_dict['random_forest'] = rf_feature_selection(nzv_x_train, y_train, nzv_x_test, y_test)
-    nzv_gene_set_dict['boosting'] = gbm_feature_selection(nzv_x_train, y_train, nzv_x_test, y_test)
+    # nzv_gene_set_dict['lasso'] = lasso_feature_selection(nzv_x_train, y_train, nzv_x_test, y_test)
+    # nzv_gene_set_dict['random_forest'] = rf_feature_selection(nzv_x_train, y_train, nzv_x_test, y_test)
+    # nzv_gene_set_dict['boosting'] = gbm_feature_selection(nzv_x_train, y_train, nzv_x_test, y_test)
 
     # Save best gene sets for further processing
-    save_best_genes(gene_set_dict, nzv_gene_set_dict)
+    # save_best_genes(gene_set_dict, nzv_gene_set_dict)
 
 
 if __name__ == "__main__":
