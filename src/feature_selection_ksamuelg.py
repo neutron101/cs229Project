@@ -83,7 +83,7 @@ def remove_near_zero_variance(x_train, x_test):
     output_dir = '../gene_set/'
     filename = output_dir + 'non_zero_variance'
     np.savetxt(filename, feature_space, fmt='%s')
-    print feature_space
+    print len(feature_space)
     return nzv_x, nzv_x_test
 
 
