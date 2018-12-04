@@ -8,6 +8,7 @@ from sklearn.metrics import confusion_matrix
 from feature_selector import FeatureSelector
 from classifier import BaseClassifier
 import numpy  as np
+from sklearn.feature_selection import VarianceThreshold
 
 def myprint(str, filename=None):
 	if filename is not None:
@@ -67,4 +68,58 @@ def read_feature_set(params):
 
 	else:			
 		raise Exception('Feature file name not specified: ' + dictprint(params))
+
+
+def remove_near_zero_variance(x_train, x_test, filename=None, thresholdv=.01):
+    selector = VarianceThreshold(threshold=thresholdv)
+    model = selector.fit(x_train)
+    print(x_train.shape)
+    nzv_x = x_train[x_train.columns[model.get_support(indices=True)]]
+    nzv_x_test = x_test[x_test.columns[model.get_support(indices=True)]]
+
+    feature_space = x_train.columns[model.get_support(indices=True)]
+    if filename is not None:
+	    np.savetxt(filename, feature_space, fmt='%s')
+
+    print 'Feature count {}'.format(len(feature_space))
+    
+    return nzv_x, nzv_x_test
+
+def do_error(ds, patients, true, predictions):
+
+	if len(true)<= 0 or len(predictions)<=0:
+		return
+
+	ds.load_gene_data()
+
+	data = ds.cdf
+
+	tp = dict((v, []) for v in data.keys().values)
+	tn = dict((v, []) for v in data.keys().values)
+	fn = dict((v, []) for v in data.keys().values)
+	fp = dict((v, []) for v in data.keys().values)
+
+	for i in range(len(true)):
+		t = true[i]
+		p = predictions[i]
+
+		if t and p:
+			copy(tp, data.T.get(patients[i]))
+		elif not t and not p:
+			copy(tn, data.T.get(patients[i]))
+		elif t and not p:
+			copy(fp, data.T.get(patients[i]))
+		else:
+			copy(fn, data.T.get(patients[i]))
+
+	return tp, fp, tn, fn
+
+def copy(d, series):
+
+	for k in d.keys():
+		d[k].append(series.get(k))
+
+
+
+
 
