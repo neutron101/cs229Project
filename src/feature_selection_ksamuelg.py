@@ -9,6 +9,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.model_selection import GridSearchCV
+from sklearn.model_selection import cross_val_score
 
 
 def process_data():
@@ -74,16 +75,16 @@ def lasso_feature_selection(x_train, y_train, x_test, y_test):
 
 
 def remove_near_zero_variance(x_train, x_test):
-    selector = VarianceThreshold(threshold=0.01)
+    selector = VarianceThreshold(threshold=0.005)
     model = selector.fit(x_train)
     nzv_x = x_train[x_train.columns[model.get_support(indices=True)]]
     nzv_x_test = x_test[x_test.columns[model.get_support(indices=True)]]
 
     feature_space = x_train.columns[model.get_support(indices=True)]
     output_dir = '../gene_set/'
-    filename = output_dir + 'non_zero_variance'
+    filename = output_dir + 'non_zero_variance_test'
     np.savetxt(filename, feature_space, fmt='%s')
-    print len(feature_space)
+    print ('feature space:' + str(len(feature_space)))
     return nzv_x, nzv_x_test
 
 
@@ -101,7 +102,11 @@ def save_best_genes(set_normal, set_nzv):
 def rf_feature_selection(x_train, y_train, x_test, y_test):
     clf = RandomForestClassifier(n_estimators=1000, min_samples_split=3, min_samples_leaf=3)
     clf.fit(x_train, y_train)
-    sfm = SelectFromModel(clf, threshold=0.0025)
+    importances = clf.feature_importances_
+    # indices = np.argsort(importances)[::-1]
+    # for f in range(x_train.shape[1]):
+    #     print("%d. feature %d (%f)" % (f + 1, indices[f], importances[indices[f]]))
+    sfm = SelectFromModel(clf, threshold=0.005)
     sfm.fit(x_train, y_train)
 
     clf_imp = RandomForestClassifier(n_estimators=1000, min_samples_split=3, min_samples_leaf=3)
@@ -118,6 +123,7 @@ def rf_feature_selection(x_train, y_train, x_test, y_test):
     print('rf accuracy: ' + str(acc) + ' rf importance only: ' + str(imp_only))
 
     gene_names = x_train.columns[sfm.get_support()]
+    print len(gene_names)
     return gene_names
 
 
@@ -171,21 +177,21 @@ def main():
 
     # Perform feature selection without removing near zero variance features first
     print('Running feature selection BEFORE non-zero variance reduction')
-    # gene_set_dict = {}
-    # gene_set_dict['lasso'] = lasso_feature_selection(x_train, y_train, x_test, y_test)
-    # gene_set_dict['random_forest'] = rf_feature_selection(x_train, y_train, x_test, y_test)
-    # gene_set_dict['boosting'] = gbm_feature_selection(x_train, y_train, x_test, y_test)
+    gene_set_dict = {}
+    gene_set_dict['lasso'] = lasso_feature_selection(x_train, y_train, x_test, y_test)
+    gene_set_dict['random_forest'] = rf_feature_selection(x_train, y_train, x_test, y_test)
+    gene_set_dict['boosting'] = gbm_feature_selection(x_train, y_train, x_test, y_test)
 
     # Perform feature selection after removing near zero variance features
     print('Running feature selection AFTER non-zero variance reduction')
     nzv_gene_set_dict = {}
     nzv_x_train, nzv_x_test = remove_near_zero_variance(x_train, x_test)
-    # nzv_gene_set_dict['lasso'] = lasso_feature_selection(nzv_x_train, y_train, nzv_x_test, y_test)
-    # nzv_gene_set_dict['random_forest'] = rf_feature_selection(nzv_x_train, y_train, nzv_x_test, y_test)
-    # nzv_gene_set_dict['boosting'] = gbm_feature_selection(nzv_x_train, y_train, nzv_x_test, y_test)
+    nzv_gene_set_dict['lasso'] = lasso_feature_selection(nzv_x_train, y_train, nzv_x_test, y_test)
+    nzv_gene_set_dict['random_forest'] = rf_feature_selection(nzv_x_train, y_train, nzv_x_test, y_test)
+    nzv_gene_set_dict['boosting'] = gbm_feature_selection(nzv_x_train, y_train, nzv_x_test, y_test)
 
     # Save best gene sets for further processing
-    # save_best_genes(gene_set_dict, nzv_gene_set_dict)
+    save_best_genes(gene_set_dict, nzv_gene_set_dict)
 
 
 if __name__ == "__main__":
