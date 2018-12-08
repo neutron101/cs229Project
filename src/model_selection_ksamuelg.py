@@ -8,12 +8,12 @@ from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.model_selection import GridSearchCV
 from sklearn.model_selection import cross_val_score
 
+data_dir = 'data/'
 
 
 def process_data():
     gene_file = 'gene_expression.csv'
     clinical_file = 'clinical.csv'
-    data_dir = '../data/'
 
     gene_file_path = os.path.join(data_dir, gene_file)
     clinical_file_path = os.path.join(data_dir, clinical_file)
@@ -102,8 +102,10 @@ def linear_hyperparameter_Search(x_train, y_train):
 def main():
     # split into train and test data
     x_train, y_train, x_test, y_test = process_data()
-    union_all = set(np.loadtxt('/Users/Karina/Developer/cs229Project/gene_set/unionall', dtype= str))
-    intersection_2 = set(np.loadtxt('/Users/Karina/Developer/cs229Project/gene_set/atleast2', dtype= str))
+    union_path = data_dir + 'unionall'
+    atleast2_path = data_dir + 'atleast2'
+    union_all = set(np.loadtxt(union_path, dtype= str))
+    intersection_2 = set(np.loadtxt(atleast2_path, dtype= str))
     x_train_union = x_train.loc[:, union_all]
     x_train_intersection = x_train.loc[:, intersection_2]
 
