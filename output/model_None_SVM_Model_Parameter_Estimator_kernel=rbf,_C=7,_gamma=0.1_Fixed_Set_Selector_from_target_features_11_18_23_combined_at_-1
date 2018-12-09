@@ -1,7 +1,0 @@
--------------Statistics-------------------------------------
-Time lapsed: ['0:05:35.754642 secs'] secs.
-Selector: Set=1, FeatureCount=562 with SVM Model Parameter Estimator kernel=rbf, C=7, gamma=0.1.
-Accuracy=0.894886 Sensitivity=0.928 Specificity=0.860 f1_score=0.900 my_score=0.017  
-Confusion matrix: tn=148.0000, fp=24.0000, fn=13.0000, tp=167.0000 
-Normalized Confusion matrix: tn=0.8605, fp=0.1395, fn=0.0722, tp=0.9278 
-------------------------------------------------------------

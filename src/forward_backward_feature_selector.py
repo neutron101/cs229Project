@@ -10,52 +10,70 @@ class ForwardSelector(FeatureSelector):
 
 	def __init__(self):
 		super(ForwardSelector, self).__init__()
+		self.set_stats = []
+		self.current_features = []
+		self.working_set = None
 
 	def select(self, params={}):
 		
-		if bool(params) and 'feature_file' in params:
-			feature_file = params['feature_file']
-			self.features = utils.load_string_data(feature_file)
+		if bool(params):
+			if 'feature_file' in params:
+				feature_file = params['feature_file']
+				self.features = utils.load_string_data(feature_file)
+			else:
+				self.features = list(self.data.genes())
 		else:			
 			self.features = list(self.data.genes())
 
-		self.current_features = []
-		self.current_feature = 0
-		self.working_set = None
-		self.prev = None
-
+		self.features = list(self.features)
+ 
 
 	def _create_featurelist(self):	
 
-		if self.current_feature+1 <= len(self.features):
-			self.current_features.append(self.features[self.current_feature])
-			self.current_feature = self.current_feature+1
-			self.working_set = list(self.current_features)
-		else:
-			self.working_set = []
+		if len(self.features) <= 0:
+			return 
+
+		self.working_set = []
+ 		
+ 		for i in range(0, len(self.features)):
+ 			element = self.features[i]
+ 			new_list = list(self.current_features)
+ 			new_list.append(element)
+ 			self.working_set.append(new_list)
+
 
 	def eval(self, stats):
-		if self.prev is None:
-			score = np.NINF
-		else:
-			score = self.prev.conf_based_stats()[0] - stats.conf_based_stats()[0]
+		self.set_stats.append(stats)
 
-		# metric went up which is good
-		if score >= (0-acc_epsilon):
-			self.current_features = self.current_features[0:-1]
-		else:
-			self.prev = stats	
+	def eval_set(self):
 
+		temp = np.zeros(len(self.set_stats))
+		for s in range(len(self.set_stats)):
+			temp[s] = self.set_stats[s].conf_based_stats()[0]
+
+		keeper = np.argmax(temp)
+
+		best_stats = self.set_stats[keeper]
+		best_stats.add_metric(list(self.current_features), '_features')
+
+		self.current_features.append(self.features[keeper])
+		self.features.pop(keeper)
+
+
+		self.set_stats = []
 		self._create_featurelist()
 
-	def def_gen(self, X, Y):
-		while True:
-			working_set = self.working_set
-			self.working_set = None
-			if not working_set:
-				break
+		return best_stats
 
-			yield (X.filter(items=working_set, axis=0), Y)
+
+	def def_gen(self, X, Y):
+ 		while True:
+ 			working_set = self.working_set
+ 			self.working_set = None
+ 			if not working_set:
+ 				break
+
+ 			yield ((X.filter(items=f, axis=0), Y) for f in working_set)
 
 
 	def training_data(self):
@@ -69,13 +87,16 @@ class ForwardSelector(FeatureSelector):
 		return self.def_gen(X, Y)
 
 	def desc(self):
-		return 'Forward Selector {} genes'.format(len(self.working_set) if self.working_set is not None else 0)
+		return 'Forward Selector'.format(len(self.working_set) if self.working_set is not None else 0)
 
 
 class BackwardSelector(FeatureSelector):
 
 	def __init__(self):
 		super(BackwardSelector, self).__init__()
+		self.set_stats = []
+		self.current_features = []
+		self.working_set = None
 
 	def select(self, params={}):
 		
@@ -86,55 +107,64 @@ class BackwardSelector(FeatureSelector):
 			self.features = list(self.data.genes())
 
 		self.current_features = list(self.features)
-		self.current_feature = len(self.features)
-		self.working_set = self.current_features
-		self.prev = None
 
 
 	def _create_featurelist(self):	
 
-		if self.current_feature-1 >= 0:
-			self.current_feature = self.current_feature-1
-			self.prev_set = list(self.current_features)
-			self.working_set = self.current_features
-			self.working_set.pop(self.current_feature)
-		else:
-			self.working_set = []
+		if len(self.current_features) <= 0:
+			return
+
+		self.working_set = []
+ 		
+ 		for i in range(0, len(self.current_features)):
+ 			new_list = list(self.current_features)
+ 			if len(new_list) > 1:
+	 			new_list.pop(i)
+ 			self.working_set.append(new_list)
+
 
 	def eval(self, stats):
-		if self.prev is None:
-			score = np.NINF
-		else:
-			score = self.prev.conf_based_stats()[0] - stats.conf_based_stats()[0]
-		print('score', score)
-		# metric went up which is good
-		if score >= (0+b_acc_epsilon):
-			self.current_features = self.prev_set
-		else:
-			self.prev = stats
+		self.set_stats.append(stats)
 
+	def eval_set(self):
+
+		temp = np.zeros(len(self.set_stats))
+		for s in range(len(self.set_stats)):
+			temp[s] = self.set_stats[s].conf_based_stats()[0]
+
+		deleter = np.argmax(temp)
+
+		best_stats = self.set_stats[deleter]
+		best_stats.add_metric(list(self.current_features), '_features')
+
+		self.current_features.pop(deleter)
+
+		self.set_stats = []
 		self._create_featurelist()
 
-	def def_gen(self, X, Y):
-		while True:
-			working_set = self.working_set
-			self.working_set = None
-			if not working_set:
-				break
-		
-			yield (X.filter(items=working_set, axis=0), Y)
+		return best_stats
 
+	def def_gen(self, X, Y):
+ 		while True:
+ 			working_set = self.working_set
+ 			if not working_set:
+ 				break
+ 			self.working_set = None
+
+ 			yield ((X.filter(items=f, axis=0), Y) for f in working_set)
 
 	def training_data(self):
+		self._create_featurelist()
 		X, Y = self.data.for_train().gene_data()
 		return self.def_gen(X, Y)
 
 	def test_data(self):
+		self._create_featurelist()
 		X, Y = self.data.for_test().gene_data()
 		return self.def_gen(X, Y)
 
 	def desc(self):
-		return 'Backward Selector {} genes'.format(len(self.working_set) if self.working_set is not None else 0)
+		return 'Backward Selector'.format(len(self.working_set) if self.working_set is not None else 0)
 
 
 class RandomLimitedFeatureSelector(FeatureSelector):
@@ -221,7 +251,11 @@ class FixedSetSelector(FeatureSelector):
 		self.best_feature_file = None
 
 	def select(self, params=None):
-		self.features, self.set_idx, self.best_feature_file = utils.read_feature_set(params)
+		if bool(params):
+			self.features, self.set_idx, self.best_feature_file = utils.read_feature_set(params)
+		else:
+			self.features, self.set_idx, self.best_feature_file = [list(self.data.genes())], -1, 'All Genes'
+
 
 	def training_data(self):
 		X, Y = self.data.for_train().gene_data()	

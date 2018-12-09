@@ -29,8 +29,9 @@ class Dataset(object):
 		print('Loaded data for {} patients. Examples: {}....'.format(len(self.patient_ids), self.patient_ids[0:4]))
 
 		clinical_file_path = os.path.join(self.data_dir, cs.clinical_file)
-		cdf = pd.read_csv(clinical_file_path, header=0, index_col=0)
+		self.cdf = pd.read_csv(clinical_file_path, header=0, index_col=0)
 
+		cdf = self.cdf
 		print('Loaded clinial data with {} features. Examples: {}....'.format(cdf.shape[1], cdf.axes[1].values[0:4]))
 
 		agg = cdf.join(df.T)

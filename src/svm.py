@@ -124,9 +124,9 @@ class SVMModelParameterEstimator(BaseClassifier):
 		X = X.values.transpose()
 
 		tuned_parameters = [{'kernel': ['rbf'], 'gamma': [0.1, 0.5, 1.25, 1, 1.5, 2, 2.5, 3, 3.5, 4],
-		             'C': [1, 3, 5, 7, 9, 11]},
+		             'C': [.1, .5, 1, 3, 5, 7, 9, 11]},
 		            {'kernel': ['linear'], 'C': [1, 5, 10, 15]},
-		            {'kernel': ['poly'], 'C': [1, 3, 5, 7, 10], 'degree':[2,3,4], 'gamma': [0.1, 0.5, 1.25, 1, 1.5, 2], 'coef0' : [1,10,5]}]
+		            {'kernel': ['poly'], 'C': [.1, .5, 1, 3, 5, 7, 10], 'degree':[2,3,4], 'gamma': [0.1, 0.5, 1.25, 1, 1.5, 2], 'coef0' : [1,3,5,7]}]
 
 		self.cv = GridSearchCV(SVC(), tuned_parameters, cv=10,
 		               scoring='accuracy', refit = True)

@@ -1,0 +1,1456 @@
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.046475 secs'] secs.
+Selector: Set=1, FeatureCount=208 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.846591 Sensitivity=0.872 Specificity=0.820 f1_score=0.853 my_score=0.009618  
+Confusion matrix: tn=141.0000, fp=31.0000, fn=23.0000, tp=157.0000 
+Normalized Confusion matrix: tn=0.8198, fp=0.1802, fn=0.1278, tp=0.8722 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.045066 secs'] secs.
+Selector: Set=2, FeatureCount=207 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.852273 Sensitivity=0.878 Specificity=0.826 f1_score=0.859 my_score=0.010072  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=22.0000, tp=158.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1222, tp=0.8778 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.046083 secs'] secs.
+Selector: Set=3, FeatureCount=206 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.857955 Sensitivity=0.889 Specificity=0.826 f1_score=0.865 my_score=0.011096  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=20.0000, tp=160.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1111, tp=0.8889 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.049049 secs'] secs.
+Selector: Set=4, FeatureCount=205 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.044824 secs'] secs.
+Selector: Set=5, FeatureCount=204 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.045311 secs'] secs.
+Selector: Set=6, FeatureCount=203 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.043522 secs'] secs.
+Selector: Set=7, FeatureCount=202 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.045689 secs'] secs.
+Selector: Set=8, FeatureCount=201 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.043051 secs'] secs.
+Selector: Set=9, FeatureCount=200 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.043090 secs'] secs.
+Selector: Set=10, FeatureCount=199 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.043870 secs'] secs.
+Selector: Set=11, FeatureCount=198 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.043162 secs'] secs.
+Selector: Set=12, FeatureCount=197 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.043837 secs'] secs.
+Selector: Set=13, FeatureCount=196 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.042254 secs'] secs.
+Selector: Set=14, FeatureCount=195 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.043388 secs'] secs.
+Selector: Set=15, FeatureCount=194 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.043672 secs'] secs.
+Selector: Set=16, FeatureCount=193 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.043820 secs'] secs.
+Selector: Set=17, FeatureCount=192 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.040259 secs'] secs.
+Selector: Set=18, FeatureCount=191 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.042379 secs'] secs.
+Selector: Set=19, FeatureCount=190 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.040510 secs'] secs.
+Selector: Set=20, FeatureCount=189 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.040508 secs'] secs.
+Selector: Set=21, FeatureCount=188 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.038160 secs'] secs.
+Selector: Set=22, FeatureCount=187 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.038571 secs'] secs.
+Selector: Set=23, FeatureCount=186 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.039922 secs'] secs.
+Selector: Set=24, FeatureCount=185 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.039679 secs'] secs.
+Selector: Set=25, FeatureCount=184 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.041073 secs'] secs.
+Selector: Set=26, FeatureCount=183 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.039014 secs'] secs.
+Selector: Set=27, FeatureCount=182 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.038417 secs'] secs.
+Selector: Set=28, FeatureCount=181 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.037876 secs'] secs.
+Selector: Set=29, FeatureCount=180 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.039122 secs'] secs.
+Selector: Set=30, FeatureCount=179 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.038038 secs'] secs.
+Selector: Set=31, FeatureCount=178 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.041706 secs'] secs.
+Selector: Set=32, FeatureCount=177 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.039319 secs'] secs.
+Selector: Set=33, FeatureCount=176 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.036971 secs'] secs.
+Selector: Set=34, FeatureCount=175 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.037225 secs'] secs.
+Selector: Set=35, FeatureCount=174 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.036771 secs'] secs.
+Selector: Set=36, FeatureCount=173 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.857955 Sensitivity=0.894 Specificity=0.820 f1_score=0.866 my_score=0.011678  
+Confusion matrix: tn=141.0000, fp=31.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8198, fp=0.1802, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.036907 secs'] secs.
+Selector: Set=37, FeatureCount=172 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.038103 secs'] secs.
+Selector: Set=38, FeatureCount=171 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.038927 secs'] secs.
+Selector: Set=39, FeatureCount=170 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.036179 secs'] secs.
+Selector: Set=40, FeatureCount=169 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.036963 secs'] secs.
+Selector: Set=41, FeatureCount=168 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.035092 secs'] secs.
+Selector: Set=42, FeatureCount=167 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.037357 secs'] secs.
+Selector: Set=43, FeatureCount=166 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.036654 secs'] secs.
+Selector: Set=44, FeatureCount=165 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.035242 secs'] secs.
+Selector: Set=45, FeatureCount=164 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.034803 secs'] secs.
+Selector: Set=46, FeatureCount=163 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.035502 secs'] secs.
+Selector: Set=47, FeatureCount=162 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.035171 secs'] secs.
+Selector: Set=48, FeatureCount=161 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.035268 secs'] secs.
+Selector: Set=49, FeatureCount=160 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.036685 secs'] secs.
+Selector: Set=50, FeatureCount=159 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.036211 secs'] secs.
+Selector: Set=51, FeatureCount=158 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.033788 secs'] secs.
+Selector: Set=52, FeatureCount=157 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.034189 secs'] secs.
+Selector: Set=53, FeatureCount=156 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.033092 secs'] secs.
+Selector: Set=54, FeatureCount=155 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.032513 secs'] secs.
+Selector: Set=55, FeatureCount=154 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.033620 secs'] secs.
+Selector: Set=56, FeatureCount=153 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.034799 secs'] secs.
+Selector: Set=57, FeatureCount=152 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.032339 secs'] secs.
+Selector: Set=58, FeatureCount=151 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.034358 secs'] secs.
+Selector: Set=59, FeatureCount=150 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.031901 secs'] secs.
+Selector: Set=60, FeatureCount=149 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.031780 secs'] secs.
+Selector: Set=61, FeatureCount=148 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.032780 secs'] secs.
+Selector: Set=62, FeatureCount=147 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.032501 secs'] secs.
+Selector: Set=63, FeatureCount=146 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.857955 Sensitivity=0.889 Specificity=0.826 f1_score=0.865 my_score=0.011096  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=20.0000, tp=160.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1111, tp=0.8889 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.032469 secs'] secs.
+Selector: Set=64, FeatureCount=145 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.857955 Sensitivity=0.889 Specificity=0.826 f1_score=0.865 my_score=0.011096  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=20.0000, tp=160.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1111, tp=0.8889 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.033806 secs'] secs.
+Selector: Set=65, FeatureCount=144 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.857955 Sensitivity=0.889 Specificity=0.826 f1_score=0.865 my_score=0.011096  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=20.0000, tp=160.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1111, tp=0.8889 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.031508 secs'] secs.
+Selector: Set=66, FeatureCount=143 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.857955 Sensitivity=0.889 Specificity=0.826 f1_score=0.865 my_score=0.011096  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=20.0000, tp=160.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1111, tp=0.8889 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.031187 secs'] secs.
+Selector: Set=67, FeatureCount=142 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.857955 Sensitivity=0.889 Specificity=0.826 f1_score=0.865 my_score=0.011096  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=20.0000, tp=160.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1111, tp=0.8889 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.031589 secs'] secs.
+Selector: Set=68, FeatureCount=141 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.857955 Sensitivity=0.889 Specificity=0.826 f1_score=0.865 my_score=0.011096  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=20.0000, tp=160.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1111, tp=0.8889 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.031610 secs'] secs.
+Selector: Set=69, FeatureCount=140 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.857955 Sensitivity=0.889 Specificity=0.826 f1_score=0.865 my_score=0.011096  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=20.0000, tp=160.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1111, tp=0.8889 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.033546 secs'] secs.
+Selector: Set=70, FeatureCount=139 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.857955 Sensitivity=0.889 Specificity=0.826 f1_score=0.865 my_score=0.011096  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=20.0000, tp=160.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1111, tp=0.8889 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.030112 secs'] secs.
+Selector: Set=71, FeatureCount=138 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.857955 Sensitivity=0.889 Specificity=0.826 f1_score=0.865 my_score=0.011096  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=20.0000, tp=160.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1111, tp=0.8889 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.030546 secs'] secs.
+Selector: Set=72, FeatureCount=137 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.857955 Sensitivity=0.889 Specificity=0.826 f1_score=0.865 my_score=0.011096  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=20.0000, tp=160.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1111, tp=0.8889 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.028566 secs'] secs.
+Selector: Set=73, FeatureCount=136 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.030477 secs'] secs.
+Selector: Set=74, FeatureCount=135 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.030040 secs'] secs.
+Selector: Set=75, FeatureCount=134 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.029574 secs'] secs.
+Selector: Set=76, FeatureCount=133 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.029623 secs'] secs.
+Selector: Set=77, FeatureCount=132 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.860795 Sensitivity=0.894 Specificity=0.826 f1_score=0.868 my_score=0.011685  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.029352 secs'] secs.
+Selector: Set=78, FeatureCount=131 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.857955 Sensitivity=0.889 Specificity=0.826 f1_score=0.865 my_score=0.011096  
+Confusion matrix: tn=142.0000, fp=30.0000, fn=20.0000, tp=160.0000 
+Normalized Confusion matrix: tn=0.8256, fp=0.1744, fn=0.1111, tp=0.8889 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.029112 secs'] secs.
+Selector: Set=79, FeatureCount=130 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.857955 Sensitivity=0.894 Specificity=0.820 f1_score=0.866 my_score=0.011678  
+Confusion matrix: tn=141.0000, fp=31.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8198, fp=0.1802, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.029985 secs'] secs.
+Selector: Set=80, FeatureCount=129 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.857955 Sensitivity=0.894 Specificity=0.820 f1_score=0.866 my_score=0.011678  
+Confusion matrix: tn=141.0000, fp=31.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8198, fp=0.1802, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.027036 secs'] secs.
+Selector: Set=81, FeatureCount=128 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.857955 Sensitivity=0.894 Specificity=0.820 f1_score=0.866 my_score=0.011678  
+Confusion matrix: tn=141.0000, fp=31.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8198, fp=0.1802, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.027238 secs'] secs.
+Selector: Set=82, FeatureCount=127 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.857955 Sensitivity=0.894 Specificity=0.820 f1_score=0.866 my_score=0.011678  
+Confusion matrix: tn=141.0000, fp=31.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8198, fp=0.1802, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.026805 secs'] secs.
+Selector: Set=83, FeatureCount=126 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.855114 Sensitivity=0.889 Specificity=0.820 f1_score=0.863 my_score=0.011089  
+Confusion matrix: tn=141.0000, fp=31.0000, fn=20.0000, tp=160.0000 
+Normalized Confusion matrix: tn=0.8198, fp=0.1802, fn=0.1111, tp=0.8889 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.027276 secs'] secs.
+Selector: Set=84, FeatureCount=125 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.855114 Sensitivity=0.889 Specificity=0.820 f1_score=0.863 my_score=0.011089  
+Confusion matrix: tn=141.0000, fp=31.0000, fn=20.0000, tp=160.0000 
+Normalized Confusion matrix: tn=0.8198, fp=0.1802, fn=0.1111, tp=0.8889 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.027124 secs'] secs.
+Selector: Set=85, FeatureCount=124 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.855114 Sensitivity=0.889 Specificity=0.820 f1_score=0.863 my_score=0.011089  
+Confusion matrix: tn=141.0000, fp=31.0000, fn=20.0000, tp=160.0000 
+Normalized Confusion matrix: tn=0.8198, fp=0.1802, fn=0.1111, tp=0.8889 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.025464 secs'] secs.
+Selector: Set=86, FeatureCount=123 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.852273 Sensitivity=0.889 Specificity=0.814 f1_score=0.860 my_score=0.011082  
+Confusion matrix: tn=140.0000, fp=32.0000, fn=20.0000, tp=160.0000 
+Normalized Confusion matrix: tn=0.8140, fp=0.1860, fn=0.1111, tp=0.8889 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.025568 secs'] secs.
+Selector: Set=87, FeatureCount=122 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.855114 Sensitivity=0.889 Specificity=0.820 f1_score=0.863 my_score=0.011089  
+Confusion matrix: tn=141.0000, fp=31.0000, fn=20.0000, tp=160.0000 
+Normalized Confusion matrix: tn=0.8198, fp=0.1802, fn=0.1111, tp=0.8889 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.025899 secs'] secs.
+Selector: Set=88, FeatureCount=121 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.855114 Sensitivity=0.894 Specificity=0.814 f1_score=0.863 my_score=0.011670  
+Confusion matrix: tn=140.0000, fp=32.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8140, fp=0.1860, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.025105 secs'] secs.
+Selector: Set=89, FeatureCount=120 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.855114 Sensitivity=0.894 Specificity=0.814 f1_score=0.863 my_score=0.011670  
+Confusion matrix: tn=140.0000, fp=32.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8140, fp=0.1860, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.024406 secs'] secs.
+Selector: Set=90, FeatureCount=119 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.857955 Sensitivity=0.894 Specificity=0.820 f1_score=0.866 my_score=0.011678  
+Confusion matrix: tn=141.0000, fp=31.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8198, fp=0.1802, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.024344 secs'] secs.
+Selector: Set=91, FeatureCount=118 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.857955 Sensitivity=0.894 Specificity=0.820 f1_score=0.866 my_score=0.011678  
+Confusion matrix: tn=141.0000, fp=31.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8198, fp=0.1802, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.023854 secs'] secs.
+Selector: Set=92, FeatureCount=117 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.857955 Sensitivity=0.894 Specificity=0.820 f1_score=0.866 my_score=0.011678  
+Confusion matrix: tn=141.0000, fp=31.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8198, fp=0.1802, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.023544 secs'] secs.
+Selector: Set=93, FeatureCount=116 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.855114 Sensitivity=0.894 Specificity=0.814 f1_score=0.863 my_score=0.011670  
+Confusion matrix: tn=140.0000, fp=32.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8140, fp=0.1860, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.024086 secs'] secs.
+Selector: Set=94, FeatureCount=115 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.855114 Sensitivity=0.889 Specificity=0.820 f1_score=0.863 my_score=0.011089  
+Confusion matrix: tn=141.0000, fp=31.0000, fn=20.0000, tp=160.0000 
+Normalized Confusion matrix: tn=0.8198, fp=0.1802, fn=0.1111, tp=0.8889 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.023208 secs'] secs.
+Selector: Set=95, FeatureCount=114 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.852273 Sensitivity=0.883 Specificity=0.820 f1_score=0.859 my_score=0.010554  
+Confusion matrix: tn=141.0000, fp=31.0000, fn=21.0000, tp=159.0000 
+Normalized Confusion matrix: tn=0.8198, fp=0.1802, fn=0.1167, tp=0.8833 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.023554 secs'] secs.
+Selector: Set=96, FeatureCount=113 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.852273 Sensitivity=0.883 Specificity=0.820 f1_score=0.859 my_score=0.010554  
+Confusion matrix: tn=141.0000, fp=31.0000, fn=21.0000, tp=159.0000 
+Normalized Confusion matrix: tn=0.8198, fp=0.1802, fn=0.1167, tp=0.8833 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.022851 secs'] secs.
+Selector: Set=97, FeatureCount=112 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.855114 Sensitivity=0.889 Specificity=0.820 f1_score=0.863 my_score=0.011089  
+Confusion matrix: tn=141.0000, fp=31.0000, fn=20.0000, tp=160.0000 
+Normalized Confusion matrix: tn=0.8198, fp=0.1802, fn=0.1111, tp=0.8889 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.022187 secs'] secs.
+Selector: Set=98, FeatureCount=111 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.855114 Sensitivity=0.889 Specificity=0.820 f1_score=0.863 my_score=0.011089  
+Confusion matrix: tn=141.0000, fp=31.0000, fn=20.0000, tp=160.0000 
+Normalized Confusion matrix: tn=0.8198, fp=0.1802, fn=0.1111, tp=0.8889 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.023569 secs'] secs.
+Selector: Set=99, FeatureCount=110 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.855114 Sensitivity=0.889 Specificity=0.820 f1_score=0.863 my_score=0.011089  
+Confusion matrix: tn=141.0000, fp=31.0000, fn=20.0000, tp=160.0000 
+Normalized Confusion matrix: tn=0.8198, fp=0.1802, fn=0.1111, tp=0.8889 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.023199 secs'] secs.
+Selector: Set=100, FeatureCount=109 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.855114 Sensitivity=0.889 Specificity=0.820 f1_score=0.863 my_score=0.011089  
+Confusion matrix: tn=141.0000, fp=31.0000, fn=20.0000, tp=160.0000 
+Normalized Confusion matrix: tn=0.8198, fp=0.1802, fn=0.1111, tp=0.8889 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.022156 secs'] secs.
+Selector: Set=101, FeatureCount=108 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.852273 Sensitivity=0.883 Specificity=0.820 f1_score=0.859 my_score=0.010554  
+Confusion matrix: tn=141.0000, fp=31.0000, fn=21.0000, tp=159.0000 
+Normalized Confusion matrix: tn=0.8198, fp=0.1802, fn=0.1167, tp=0.8833 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.022146 secs'] secs.
+Selector: Set=102, FeatureCount=107 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.849432 Sensitivity=0.889 Specificity=0.808 f1_score=0.858 my_score=0.011074  
+Confusion matrix: tn=139.0000, fp=33.0000, fn=20.0000, tp=160.0000 
+Normalized Confusion matrix: tn=0.8081, fp=0.1919, fn=0.1111, tp=0.8889 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.022242 secs'] secs.
+Selector: Set=103, FeatureCount=106 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.852273 Sensitivity=0.894 Specificity=0.808 f1_score=0.861 my_score=0.011661  
+Confusion matrix: tn=139.0000, fp=33.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8081, fp=0.1919, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.021285 secs'] secs.
+Selector: Set=104, FeatureCount=105 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.852273 Sensitivity=0.894 Specificity=0.808 f1_score=0.861 my_score=0.011661  
+Confusion matrix: tn=139.0000, fp=33.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8081, fp=0.1919, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.021181 secs'] secs.
+Selector: Set=105, FeatureCount=104 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.852273 Sensitivity=0.894 Specificity=0.808 f1_score=0.861 my_score=0.011661  
+Confusion matrix: tn=139.0000, fp=33.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8081, fp=0.1919, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.021266 secs'] secs.
+Selector: Set=106, FeatureCount=103 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.852273 Sensitivity=0.894 Specificity=0.808 f1_score=0.861 my_score=0.011661  
+Confusion matrix: tn=139.0000, fp=33.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8081, fp=0.1919, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.024016 secs'] secs.
+Selector: Set=107, FeatureCount=102 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.849432 Sensitivity=0.894 Specificity=0.802 f1_score=0.859 my_score=0.011653  
+Confusion matrix: tn=138.0000, fp=34.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.8023, fp=0.1977, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.022375 secs'] secs.
+Selector: Set=108, FeatureCount=101 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.846591 Sensitivity=0.889 Specificity=0.802 f1_score=0.856 my_score=0.011066  
+Confusion matrix: tn=138.0000, fp=34.0000, fn=20.0000, tp=160.0000 
+Normalized Confusion matrix: tn=0.8023, fp=0.1977, fn=0.1111, tp=0.8889 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.022092 secs'] secs.
+Selector: Set=109, FeatureCount=100 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.846591 Sensitivity=0.889 Specificity=0.802 f1_score=0.856 my_score=0.011066  
+Confusion matrix: tn=138.0000, fp=34.0000, fn=20.0000, tp=160.0000 
+Normalized Confusion matrix: tn=0.8023, fp=0.1977, fn=0.1111, tp=0.8889 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.021149 secs'] secs.
+Selector: Set=110, FeatureCount=99 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.843750 Sensitivity=0.883 Specificity=0.802 f1_score=0.853 my_score=0.010533  
+Confusion matrix: tn=138.0000, fp=34.0000, fn=21.0000, tp=159.0000 
+Normalized Confusion matrix: tn=0.8023, fp=0.1977, fn=0.1167, tp=0.8833 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.021891 secs'] secs.
+Selector: Set=111, FeatureCount=98 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.838068 Sensitivity=0.867 Specificity=0.808 f1_score=0.846 my_score=0.009193  
+Confusion matrix: tn=139.0000, fp=33.0000, fn=24.0000, tp=156.0000 
+Normalized Confusion matrix: tn=0.8081, fp=0.1919, fn=0.1333, tp=0.8667 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.021818 secs'] secs.
+Selector: Set=112, FeatureCount=97 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.835227 Sensitivity=0.867 Specificity=0.802 f1_score=0.843 my_score=0.009187  
+Confusion matrix: tn=138.0000, fp=34.0000, fn=24.0000, tp=156.0000 
+Normalized Confusion matrix: tn=0.8023, fp=0.1977, fn=0.1333, tp=0.8667 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.021838 secs'] secs.
+Selector: Set=113, FeatureCount=96 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.835227 Sensitivity=0.872 Specificity=0.797 f1_score=0.844 my_score=0.009591  
+Confusion matrix: tn=137.0000, fp=35.0000, fn=23.0000, tp=157.0000 
+Normalized Confusion matrix: tn=0.7965, fp=0.2035, fn=0.1278, tp=0.8722 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.020039 secs'] secs.
+Selector: Set=114, FeatureCount=95 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.838068 Sensitivity=0.872 Specificity=0.802 f1_score=0.846 my_score=0.009598  
+Confusion matrix: tn=138.0000, fp=34.0000, fn=23.0000, tp=157.0000 
+Normalized Confusion matrix: tn=0.8023, fp=0.1977, fn=0.1278, tp=0.8722 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.019952 secs'] secs.
+Selector: Set=115, FeatureCount=94 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.838068 Sensitivity=0.889 Specificity=0.785 f1_score=0.849 my_score=0.011040  
+Confusion matrix: tn=135.0000, fp=37.0000, fn=20.0000, tp=160.0000 
+Normalized Confusion matrix: tn=0.7849, fp=0.2151, fn=0.1111, tp=0.8889 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.020570 secs'] secs.
+Selector: Set=116, FeatureCount=93 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.846591 Sensitivity=0.894 Specificity=0.797 f1_score=0.856 my_score=0.011644  
+Confusion matrix: tn=137.0000, fp=35.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.7965, fp=0.2035, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.019985 secs'] secs.
+Selector: Set=117, FeatureCount=92 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.846591 Sensitivity=0.894 Specificity=0.797 f1_score=0.856 my_score=0.011644  
+Confusion matrix: tn=137.0000, fp=35.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.7965, fp=0.2035, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.021994 secs'] secs.
+Selector: Set=118, FeatureCount=91 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.846591 Sensitivity=0.894 Specificity=0.797 f1_score=0.856 my_score=0.011644  
+Confusion matrix: tn=137.0000, fp=35.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.7965, fp=0.2035, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.020217 secs'] secs.
+Selector: Set=119, FeatureCount=90 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.849432 Sensitivity=0.900 Specificity=0.797 f1_score=0.859 my_score=0.012291  
+Confusion matrix: tn=137.0000, fp=35.0000, fn=18.0000, tp=162.0000 
+Normalized Confusion matrix: tn=0.7965, fp=0.2035, fn=0.1000, tp=0.9000 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.019908 secs'] secs.
+Selector: Set=120, FeatureCount=89 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.849432 Sensitivity=0.900 Specificity=0.797 f1_score=0.859 my_score=0.012291  
+Confusion matrix: tn=137.0000, fp=35.0000, fn=18.0000, tp=162.0000 
+Normalized Confusion matrix: tn=0.7965, fp=0.2035, fn=0.1000, tp=0.9000 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.019108 secs'] secs.
+Selector: Set=121, FeatureCount=88 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.846591 Sensitivity=0.894 Specificity=0.797 f1_score=0.856 my_score=0.011644  
+Confusion matrix: tn=137.0000, fp=35.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.7965, fp=0.2035, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.018490 secs'] secs.
+Selector: Set=122, FeatureCount=87 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.846591 Sensitivity=0.894 Specificity=0.797 f1_score=0.856 my_score=0.011644  
+Confusion matrix: tn=137.0000, fp=35.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.7965, fp=0.2035, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.017248 secs'] secs.
+Selector: Set=123, FeatureCount=86 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.846591 Sensitivity=0.894 Specificity=0.797 f1_score=0.856 my_score=0.011644  
+Confusion matrix: tn=137.0000, fp=35.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.7965, fp=0.2035, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.017908 secs'] secs.
+Selector: Set=124, FeatureCount=85 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.846591 Sensitivity=0.894 Specificity=0.797 f1_score=0.856 my_score=0.011644  
+Confusion matrix: tn=137.0000, fp=35.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.7965, fp=0.2035, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.017213 secs'] secs.
+Selector: Set=125, FeatureCount=84 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.843750 Sensitivity=0.889 Specificity=0.797 f1_score=0.853 my_score=0.011058  
+Confusion matrix: tn=137.0000, fp=35.0000, fn=20.0000, tp=160.0000 
+Normalized Confusion matrix: tn=0.7965, fp=0.2035, fn=0.1111, tp=0.8889 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.018007 secs'] secs.
+Selector: Set=126, FeatureCount=83 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.840909 Sensitivity=0.878 Specificity=0.802 f1_score=0.849 my_score=0.010045  
+Confusion matrix: tn=138.0000, fp=34.0000, fn=22.0000, tp=158.0000 
+Normalized Confusion matrix: tn=0.8023, fp=0.1977, fn=0.1222, tp=0.8778 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.017630 secs'] secs.
+Selector: Set=127, FeatureCount=82 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.840909 Sensitivity=0.883 Specificity=0.797 f1_score=0.850 my_score=0.010525  
+Confusion matrix: tn=137.0000, fp=35.0000, fn=21.0000, tp=159.0000 
+Normalized Confusion matrix: tn=0.7965, fp=0.2035, fn=0.1167, tp=0.8833 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.016055 secs'] secs.
+Selector: Set=128, FeatureCount=81 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.843750 Sensitivity=0.883 Specificity=0.802 f1_score=0.853 my_score=0.010533  
+Confusion matrix: tn=138.0000, fp=34.0000, fn=21.0000, tp=159.0000 
+Normalized Confusion matrix: tn=0.8023, fp=0.1977, fn=0.1167, tp=0.8833 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.016424 secs'] secs.
+Selector: Set=129, FeatureCount=80 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.840909 Sensitivity=0.878 Specificity=0.802 f1_score=0.849 my_score=0.010045  
+Confusion matrix: tn=138.0000, fp=34.0000, fn=22.0000, tp=158.0000 
+Normalized Confusion matrix: tn=0.8023, fp=0.1977, fn=0.1222, tp=0.8778 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.015441 secs'] secs.
+Selector: Set=130, FeatureCount=79 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.840909 Sensitivity=0.878 Specificity=0.802 f1_score=0.849 my_score=0.010045  
+Confusion matrix: tn=138.0000, fp=34.0000, fn=22.0000, tp=158.0000 
+Normalized Confusion matrix: tn=0.8023, fp=0.1977, fn=0.1222, tp=0.8778 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.015442 secs'] secs.
+Selector: Set=131, FeatureCount=78 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.838068 Sensitivity=0.878 Specificity=0.797 f1_score=0.847 my_score=0.010038  
+Confusion matrix: tn=137.0000, fp=35.0000, fn=22.0000, tp=158.0000 
+Normalized Confusion matrix: tn=0.7965, fp=0.2035, fn=0.1222, tp=0.8778 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.015493 secs'] secs.
+Selector: Set=132, FeatureCount=77 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.840909 Sensitivity=0.878 Specificity=0.802 f1_score=0.849 my_score=0.010045  
+Confusion matrix: tn=138.0000, fp=34.0000, fn=22.0000, tp=158.0000 
+Normalized Confusion matrix: tn=0.8023, fp=0.1977, fn=0.1222, tp=0.8778 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.015360 secs'] secs.
+Selector: Set=133, FeatureCount=76 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.838068 Sensitivity=0.872 Specificity=0.802 f1_score=0.846 my_score=0.009598  
+Confusion matrix: tn=138.0000, fp=34.0000, fn=23.0000, tp=157.0000 
+Normalized Confusion matrix: tn=0.8023, fp=0.1977, fn=0.1278, tp=0.8722 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.014933 secs'] secs.
+Selector: Set=134, FeatureCount=75 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.840909 Sensitivity=0.878 Specificity=0.802 f1_score=0.849 my_score=0.010045  
+Confusion matrix: tn=138.0000, fp=34.0000, fn=22.0000, tp=158.0000 
+Normalized Confusion matrix: tn=0.8023, fp=0.1977, fn=0.1222, tp=0.8778 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.014960 secs'] secs.
+Selector: Set=135, FeatureCount=74 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.838068 Sensitivity=0.878 Specificity=0.797 f1_score=0.847 my_score=0.010038  
+Confusion matrix: tn=137.0000, fp=35.0000, fn=22.0000, tp=158.0000 
+Normalized Confusion matrix: tn=0.7965, fp=0.2035, fn=0.1222, tp=0.8778 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.014570 secs'] secs.
+Selector: Set=136, FeatureCount=73 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.838068 Sensitivity=0.878 Specificity=0.797 f1_score=0.847 my_score=0.010038  
+Confusion matrix: tn=137.0000, fp=35.0000, fn=22.0000, tp=158.0000 
+Normalized Confusion matrix: tn=0.7965, fp=0.2035, fn=0.1222, tp=0.8778 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.014658 secs'] secs.
+Selector: Set=137, FeatureCount=72 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.835227 Sensitivity=0.872 Specificity=0.797 f1_score=0.844 my_score=0.009591  
+Confusion matrix: tn=137.0000, fp=35.0000, fn=23.0000, tp=157.0000 
+Normalized Confusion matrix: tn=0.7965, fp=0.2035, fn=0.1278, tp=0.8722 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.021004 secs'] secs.
+Selector: Set=138, FeatureCount=71 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.832386 Sensitivity=0.872 Specificity=0.791 f1_score=0.842 my_score=0.009584  
+Confusion matrix: tn=136.0000, fp=36.0000, fn=23.0000, tp=157.0000 
+Normalized Confusion matrix: tn=0.7907, fp=0.2093, fn=0.1278, tp=0.8722 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.014624 secs'] secs.
+Selector: Set=139, FeatureCount=70 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.835227 Sensitivity=0.872 Specificity=0.797 f1_score=0.844 my_score=0.009591  
+Confusion matrix: tn=137.0000, fp=35.0000, fn=23.0000, tp=157.0000 
+Normalized Confusion matrix: tn=0.7965, fp=0.2035, fn=0.1278, tp=0.8722 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.014435 secs'] secs.
+Selector: Set=140, FeatureCount=69 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.832386 Sensitivity=0.872 Specificity=0.791 f1_score=0.842 my_score=0.009584  
+Confusion matrix: tn=136.0000, fp=36.0000, fn=23.0000, tp=157.0000 
+Normalized Confusion matrix: tn=0.7907, fp=0.2093, fn=0.1278, tp=0.8722 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.015270 secs'] secs.
+Selector: Set=141, FeatureCount=68 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.826705 Sensitivity=0.861 Specificity=0.791 f1_score=0.836 my_score=0.008795  
+Confusion matrix: tn=136.0000, fp=36.0000, fn=25.0000, tp=155.0000 
+Normalized Confusion matrix: tn=0.7907, fp=0.2093, fn=0.1389, tp=0.8611 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.013375 secs'] secs.
+Selector: Set=142, FeatureCount=67 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.823864 Sensitivity=0.867 Specificity=0.779 f1_score=0.834 my_score=0.009159  
+Confusion matrix: tn=134.0000, fp=38.0000, fn=24.0000, tp=156.0000 
+Normalized Confusion matrix: tn=0.7791, fp=0.2209, fn=0.1333, tp=0.8667 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.014689 secs'] secs.
+Selector: Set=143, FeatureCount=66 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.829545 Sensitivity=0.867 Specificity=0.791 f1_score=0.839 my_score=0.009174  
+Confusion matrix: tn=136.0000, fp=36.0000, fn=24.0000, tp=156.0000 
+Normalized Confusion matrix: tn=0.7907, fp=0.2093, fn=0.1333, tp=0.8667 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.013772 secs'] secs.
+Selector: Set=144, FeatureCount=65 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.826705 Sensitivity=0.872 Specificity=0.779 f1_score=0.837 my_score=0.009569  
+Confusion matrix: tn=134.0000, fp=38.0000, fn=23.0000, tp=157.0000 
+Normalized Confusion matrix: tn=0.7791, fp=0.2209, fn=0.1278, tp=0.8722 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.012824 secs'] secs.
+Selector: Set=145, FeatureCount=64 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.821023 Sensitivity=0.856 Specificity=0.785 f1_score=0.830 my_score=0.008437  
+Confusion matrix: tn=135.0000, fp=37.0000, fn=26.0000, tp=154.0000 
+Normalized Confusion matrix: tn=0.7849, fp=0.2151, fn=0.1444, tp=0.8556 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.014372 secs'] secs.
+Selector: Set=146, FeatureCount=63 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.823864 Sensitivity=0.872 Specificity=0.773 f1_score=0.835 my_score=0.009561  
+Confusion matrix: tn=133.0000, fp=39.0000, fn=23.0000, tp=157.0000 
+Normalized Confusion matrix: tn=0.7733, fp=0.2267, fn=0.1278, tp=0.8722 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.012318 secs'] secs.
+Selector: Set=147, FeatureCount=62 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.826705 Sensitivity=0.867 Specificity=0.785 f1_score=0.836 my_score=0.009167  
+Confusion matrix: tn=135.0000, fp=37.0000, fn=24.0000, tp=156.0000 
+Normalized Confusion matrix: tn=0.7849, fp=0.2151, fn=0.1333, tp=0.8667 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.011888 secs'] secs.
+Selector: Set=148, FeatureCount=61 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.823864 Sensitivity=0.861 Specificity=0.785 f1_score=0.833 my_score=0.008788  
+Confusion matrix: tn=135.0000, fp=37.0000, fn=25.0000, tp=155.0000 
+Normalized Confusion matrix: tn=0.7849, fp=0.2151, fn=0.1389, tp=0.8611 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.011869 secs'] secs.
+Selector: Set=149, FeatureCount=60 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.823864 Sensitivity=0.872 Specificity=0.773 f1_score=0.835 my_score=0.009561  
+Confusion matrix: tn=133.0000, fp=39.0000, fn=23.0000, tp=157.0000 
+Normalized Confusion matrix: tn=0.7733, fp=0.2267, fn=0.1278, tp=0.8722 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.014066 secs'] secs.
+Selector: Set=150, FeatureCount=59 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.818182 Sensitivity=0.861 Specificity=0.773 f1_score=0.829 my_score=0.008773  
+Confusion matrix: tn=133.0000, fp=39.0000, fn=25.0000, tp=155.0000 
+Normalized Confusion matrix: tn=0.7733, fp=0.2267, fn=0.1389, tp=0.8611 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.011428 secs'] secs.
+Selector: Set=151, FeatureCount=58 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.818182 Sensitivity=0.861 Specificity=0.773 f1_score=0.829 my_score=0.008773  
+Confusion matrix: tn=133.0000, fp=39.0000, fn=25.0000, tp=155.0000 
+Normalized Confusion matrix: tn=0.7733, fp=0.2267, fn=0.1389, tp=0.8611 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.011420 secs'] secs.
+Selector: Set=152, FeatureCount=57 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.821023 Sensitivity=0.856 Specificity=0.785 f1_score=0.830 my_score=0.008437  
+Confusion matrix: tn=135.0000, fp=37.0000, fn=26.0000, tp=154.0000 
+Normalized Confusion matrix: tn=0.7849, fp=0.2151, fn=0.1444, tp=0.8556 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.011264 secs'] secs.
+Selector: Set=153, FeatureCount=56 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.821023 Sensitivity=0.872 Specificity=0.767 f1_score=0.833 my_score=0.009552  
+Confusion matrix: tn=132.0000, fp=40.0000, fn=23.0000, tp=157.0000 
+Normalized Confusion matrix: tn=0.7674, fp=0.2326, fn=0.1278, tp=0.8722 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.011897 secs'] secs.
+Selector: Set=154, FeatureCount=55 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.815341 Sensitivity=0.872 Specificity=0.756 f1_score=0.828 my_score=0.009534  
+Confusion matrix: tn=130.0000, fp=42.0000, fn=23.0000, tp=157.0000 
+Normalized Confusion matrix: tn=0.7558, fp=0.2442, fn=0.1278, tp=0.8722 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.011291 secs'] secs.
+Selector: Set=155, FeatureCount=54 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.815341 Sensitivity=0.867 Specificity=0.762 f1_score=0.828 my_score=0.009135  
+Confusion matrix: tn=131.0000, fp=41.0000, fn=24.0000, tp=156.0000 
+Normalized Confusion matrix: tn=0.7616, fp=0.2384, fn=0.1333, tp=0.8667 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.010982 secs'] secs.
+Selector: Set=156, FeatureCount=53 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.812500 Sensitivity=0.856 Specificity=0.767 f1_score=0.824 my_score=0.008416  
+Confusion matrix: tn=132.0000, fp=40.0000, fn=26.0000, tp=154.0000 
+Normalized Confusion matrix: tn=0.7674, fp=0.2326, fn=0.1444, tp=0.8556 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.010597 secs'] secs.
+Selector: Set=157, FeatureCount=52 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.812500 Sensitivity=0.856 Specificity=0.767 f1_score=0.824 my_score=0.008416  
+Confusion matrix: tn=132.0000, fp=40.0000, fn=26.0000, tp=154.0000 
+Normalized Confusion matrix: tn=0.7674, fp=0.2326, fn=0.1444, tp=0.8556 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.010649 secs'] secs.
+Selector: Set=158, FeatureCount=51 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.812500 Sensitivity=0.861 Specificity=0.762 f1_score=0.824 my_score=0.008758  
+Confusion matrix: tn=131.0000, fp=41.0000, fn=25.0000, tp=155.0000 
+Normalized Confusion matrix: tn=0.7616, fp=0.2384, fn=0.1389, tp=0.8611 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.010132 secs'] secs.
+Selector: Set=159, FeatureCount=50 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.806818 Sensitivity=0.861 Specificity=0.750 f1_score=0.820 my_score=0.008741  
+Confusion matrix: tn=129.0000, fp=43.0000, fn=25.0000, tp=155.0000 
+Normalized Confusion matrix: tn=0.7500, fp=0.2500, fn=0.1389, tp=0.8611 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.009986 secs'] secs.
+Selector: Set=160, FeatureCount=49 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.803977 Sensitivity=0.861 Specificity=0.744 f1_score=0.818 my_score=0.008732  
+Confusion matrix: tn=128.0000, fp=44.0000, fn=25.0000, tp=155.0000 
+Normalized Confusion matrix: tn=0.7442, fp=0.2558, fn=0.1389, tp=0.8611 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.010026 secs'] secs.
+Selector: Set=161, FeatureCount=48 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.798295 Sensitivity=0.850 Specificity=0.744 f1_score=0.812 my_score=0.008061  
+Confusion matrix: tn=128.0000, fp=44.0000, fn=27.0000, tp=153.0000 
+Normalized Confusion matrix: tn=0.7442, fp=0.2558, fn=0.1500, tp=0.8500 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.010673 secs'] secs.
+Selector: Set=162, FeatureCount=47 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.798295 Sensitivity=0.844 Specificity=0.750 f1_score=0.811 my_score=0.007768  
+Confusion matrix: tn=129.0000, fp=43.0000, fn=28.0000, tp=152.0000 
+Normalized Confusion matrix: tn=0.7500, fp=0.2500, fn=0.1556, tp=0.8444 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.010483 secs'] secs.
+Selector: Set=163, FeatureCount=46 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.801136 Sensitivity=0.850 Specificity=0.750 f1_score=0.814 my_score=0.008069  
+Confusion matrix: tn=129.0000, fp=43.0000, fn=27.0000, tp=153.0000 
+Normalized Confusion matrix: tn=0.7500, fp=0.2500, fn=0.1500, tp=0.8500 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.009901 secs'] secs.
+Selector: Set=164, FeatureCount=45 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.803977 Sensitivity=0.856 Specificity=0.750 f1_score=0.817 my_score=0.008393  
+Confusion matrix: tn=129.0000, fp=43.0000, fn=26.0000, tp=154.0000 
+Normalized Confusion matrix: tn=0.7500, fp=0.2500, fn=0.1444, tp=0.8556 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.011069 secs'] secs.
+Selector: Set=165, FeatureCount=44 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.801136 Sensitivity=0.856 Specificity=0.744 f1_score=0.815 my_score=0.008385  
+Confusion matrix: tn=128.0000, fp=44.0000, fn=26.0000, tp=154.0000 
+Normalized Confusion matrix: tn=0.7442, fp=0.2558, fn=0.1444, tp=0.8556 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.009729 secs'] secs.
+Selector: Set=166, FeatureCount=43 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.798295 Sensitivity=0.839 Specificity=0.756 f1_score=0.810 my_score=0.007493  
+Confusion matrix: tn=130.0000, fp=42.0000, fn=29.0000, tp=151.0000 
+Normalized Confusion matrix: tn=0.7558, fp=0.2442, fn=0.1611, tp=0.8389 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.009573 secs'] secs.
+Selector: Set=167, FeatureCount=42 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.795455 Sensitivity=0.839 Specificity=0.750 f1_score=0.807 my_score=0.007486  
+Confusion matrix: tn=129.0000, fp=43.0000, fn=29.0000, tp=151.0000 
+Normalized Confusion matrix: tn=0.7500, fp=0.2500, fn=0.1611, tp=0.8389 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.009737 secs'] secs.
+Selector: Set=168, FeatureCount=41 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.798295 Sensitivity=0.833 Specificity=0.762 f1_score=0.809 my_score=0.007236  
+Confusion matrix: tn=131.0000, fp=41.0000, fn=30.0000, tp=150.0000 
+Normalized Confusion matrix: tn=0.7616, fp=0.2384, fn=0.1667, tp=0.8333 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.009215 secs'] secs.
+Selector: Set=169, FeatureCount=40 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.795455 Sensitivity=0.833 Specificity=0.756 f1_score=0.806 my_score=0.007229  
+Confusion matrix: tn=130.0000, fp=42.0000, fn=30.0000, tp=150.0000 
+Normalized Confusion matrix: tn=0.7558, fp=0.2442, fn=0.1667, tp=0.8333 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.010560 secs'] secs.
+Selector: Set=170, FeatureCount=39 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.789773 Sensitivity=0.822 Specificity=0.756 f1_score=0.800 my_score=0.006749  
+Confusion matrix: tn=130.0000, fp=42.0000, fn=32.0000, tp=148.0000 
+Normalized Confusion matrix: tn=0.7558, fp=0.2442, fn=0.1778, tp=0.8222 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.008626 secs'] secs.
+Selector: Set=171, FeatureCount=38 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.789773 Sensitivity=0.844 Specificity=0.733 f1_score=0.804 my_score=0.007744  
+Confusion matrix: tn=126.0000, fp=46.0000, fn=28.0000, tp=152.0000 
+Normalized Confusion matrix: tn=0.7326, fp=0.2674, fn=0.1556, tp=0.8444 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.010313 secs'] secs.
+Selector: Set=172, FeatureCount=37 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.795455 Sensitivity=0.872 Specificity=0.715 f1_score=0.813 my_score=0.009460  
+Confusion matrix: tn=123.0000, fp=49.0000, fn=23.0000, tp=157.0000 
+Normalized Confusion matrix: tn=0.7151, fp=0.2849, fn=0.1278, tp=0.8722 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.008684 secs'] secs.
+Selector: Set=173, FeatureCount=36 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.792614 Sensitivity=0.867 Specificity=0.715 f1_score=0.810 my_score=0.009056  
+Confusion matrix: tn=123.0000, fp=49.0000, fn=24.0000, tp=156.0000 
+Normalized Confusion matrix: tn=0.7151, fp=0.2849, fn=0.1333, tp=0.8667 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.008644 secs'] secs.
+Selector: Set=174, FeatureCount=35 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.789773 Sensitivity=0.867 Specificity=0.709 f1_score=0.808 my_score=0.009045  
+Confusion matrix: tn=122.0000, fp=50.0000, fn=24.0000, tp=156.0000 
+Normalized Confusion matrix: tn=0.7093, fp=0.2907, fn=0.1333, tp=0.8667 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.008055 secs'] secs.
+Selector: Set=175, FeatureCount=34 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.792614 Sensitivity=0.872 Specificity=0.709 f1_score=0.811 my_score=0.009448  
+Confusion matrix: tn=122.0000, fp=50.0000, fn=23.0000, tp=157.0000 
+Normalized Confusion matrix: tn=0.7093, fp=0.2907, fn=0.1278, tp=0.8722 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.008181 secs'] secs.
+Selector: Set=176, FeatureCount=33 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.792614 Sensitivity=0.872 Specificity=0.709 f1_score=0.811 my_score=0.009448  
+Confusion matrix: tn=122.0000, fp=50.0000, fn=23.0000, tp=157.0000 
+Normalized Confusion matrix: tn=0.7093, fp=0.2907, fn=0.1278, tp=0.8722 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.007552 secs'] secs.
+Selector: Set=177, FeatureCount=32 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.792614 Sensitivity=0.878 Specificity=0.703 f1_score=0.812 my_score=0.009873  
+Confusion matrix: tn=121.0000, fp=51.0000, fn=22.0000, tp=158.0000 
+Normalized Confusion matrix: tn=0.7035, fp=0.2965, fn=0.1222, tp=0.8778 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.007784 secs'] secs.
+Selector: Set=178, FeatureCount=31 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.795455 Sensitivity=0.878 Specificity=0.709 f1_score=0.814 my_score=0.009886  
+Confusion matrix: tn=122.0000, fp=50.0000, fn=22.0000, tp=158.0000 
+Normalized Confusion matrix: tn=0.7093, fp=0.2907, fn=0.1222, tp=0.8778 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.007382 secs'] secs.
+Selector: Set=179, FeatureCount=30 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.789773 Sensitivity=0.883 Specificity=0.692 f1_score=0.811 my_score=0.010321  
+Confusion matrix: tn=119.0000, fp=53.0000, fn=21.0000, tp=159.0000 
+Normalized Confusion matrix: tn=0.6919, fp=0.3081, fn=0.1167, tp=0.8833 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.007377 secs'] secs.
+Selector: Set=180, FeatureCount=29 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.778409 Sensitivity=0.878 Specificity=0.674 f1_score=0.802 my_score=0.009801  
+Confusion matrix: tn=116.0000, fp=56.0000, fn=22.0000, tp=158.0000 
+Normalized Confusion matrix: tn=0.6744, fp=0.3256, fn=0.1222, tp=0.8778 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.007320 secs'] secs.
+Selector: Set=181, FeatureCount=28 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.772727 Sensitivity=0.872 Specificity=0.669 f1_score=0.797 my_score=0.009353  
+Confusion matrix: tn=115.0000, fp=57.0000, fn=23.0000, tp=157.0000 
+Normalized Confusion matrix: tn=0.6686, fp=0.3314, fn=0.1278, tp=0.8722 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.006988 secs'] secs.
+Selector: Set=182, FeatureCount=27 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.772727 Sensitivity=0.878 Specificity=0.663 f1_score=0.798 my_score=0.009769  
+Confusion matrix: tn=114.0000, fp=58.0000, fn=22.0000, tp=158.0000 
+Normalized Confusion matrix: tn=0.6628, fp=0.3372, fn=0.1222, tp=0.8778 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.006762 secs'] secs.
+Selector: Set=183, FeatureCount=26 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.767045 Sensitivity=0.900 Specificity=0.628 f1_score=0.798 my_score=0.011814  
+Confusion matrix: tn=108.0000, fp=64.0000, fn=18.0000, tp=162.0000 
+Normalized Confusion matrix: tn=0.6279, fp=0.3721, fn=0.1000, tp=0.9000 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.006454 secs'] secs.
+Selector: Set=184, FeatureCount=25 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.761364 Sensitivity=0.889 Specificity=0.628 f1_score=0.792 my_score=0.010636  
+Confusion matrix: tn=108.0000, fp=64.0000, fn=20.0000, tp=160.0000 
+Normalized Confusion matrix: tn=0.6279, fp=0.3721, fn=0.1111, tp=0.8889 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.006502 secs'] secs.
+Selector: Set=185, FeatureCount=24 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.764205 Sensitivity=0.894 Specificity=0.628 f1_score=0.795 my_score=0.011196  
+Confusion matrix: tn=108.0000, fp=64.0000, fn=19.0000, tp=161.0000 
+Normalized Confusion matrix: tn=0.6279, fp=0.3721, fn=0.1056, tp=0.8944 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.006543 secs'] secs.
+Selector: Set=186, FeatureCount=23 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.755682 Sensitivity=0.906 Specificity=0.599 f1_score=0.791 my_score=0.012362  
+Confusion matrix: tn=103.0000, fp=69.0000, fn=17.0000, tp=163.0000 
+Normalized Confusion matrix: tn=0.5988, fp=0.4012, fn=0.0944, tp=0.9056 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.006148 secs'] secs.
+Selector: Set=187, FeatureCount=22 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.744318 Sensitivity=0.828 Specificity=0.657 f1_score=0.768 my_score=0.006838  
+Confusion matrix: tn=113.0000, fp=59.0000, fn=31.0000, tp=149.0000 
+Normalized Confusion matrix: tn=0.6570, fp=0.3430, fn=0.1722, tp=0.8278 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.005910 secs'] secs.
+Selector: Set=188, FeatureCount=21 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.747159 Sensitivity=0.856 Specificity=0.634 f1_score=0.776 my_score=0.008161  
+Confusion matrix: tn=109.0000, fp=63.0000, fn=26.0000, tp=154.0000 
+Normalized Confusion matrix: tn=0.6337, fp=0.3663, fn=0.1444, tp=0.8556 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.005708 secs'] secs.
+Selector: Set=189, FeatureCount=20 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.747159 Sensitivity=0.889 Specificity=0.599 f1_score=0.782 my_score=0.010520  
+Confusion matrix: tn=103.0000, fp=69.0000, fn=20.0000, tp=160.0000 
+Normalized Confusion matrix: tn=0.5988, fp=0.4012, fn=0.1111, tp=0.8889 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.005310 secs'] secs.
+Selector: Set=190, FeatureCount=19 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.735795 Sensitivity=0.844 Specificity=0.622 f1_score=0.766 my_score=0.007528  
+Confusion matrix: tn=107.0000, fp=65.0000, fn=28.0000, tp=152.0000 
+Normalized Confusion matrix: tn=0.6221, fp=0.3779, fn=0.1556, tp=0.8444 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.005015 secs'] secs.
+Selector: Set=191, FeatureCount=18 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.741477 Sensitivity=0.850 Specificity=0.628 f1_score=0.771 my_score=0.007833  
+Confusion matrix: tn=108.0000, fp=64.0000, fn=27.0000, tp=153.0000 
+Normalized Confusion matrix: tn=0.6279, fp=0.3721, fn=0.1500, tp=0.8500 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.004908 secs'] secs.
+Selector: Set=192, FeatureCount=17 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.732955 Sensitivity=0.850 Specificity=0.610 f1_score=0.765 my_score=0.007786  
+Confusion matrix: tn=105.0000, fp=67.0000, fn=27.0000, tp=153.0000 
+Normalized Confusion matrix: tn=0.6105, fp=0.3895, fn=0.1500, tp=0.8500 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.004840 secs'] secs.
+Selector: Set=193, FeatureCount=16 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.732955 Sensitivity=0.844 Specificity=0.616 f1_score=0.764 my_score=0.007513  
+Confusion matrix: tn=106.0000, fp=66.0000, fn=28.0000, tp=152.0000 
+Normalized Confusion matrix: tn=0.6163, fp=0.3837, fn=0.1556, tp=0.8444 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.004602 secs'] secs.
+Selector: Set=194, FeatureCount=15 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.724432 Sensitivity=0.850 Specificity=0.593 f1_score=0.759 my_score=0.007734  
+Confusion matrix: tn=102.0000, fp=70.0000, fn=27.0000, tp=153.0000 
+Normalized Confusion matrix: tn=0.5930, fp=0.4070, fn=0.1500, tp=0.8500 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.005242 secs'] secs.
+Selector: Set=195, FeatureCount=14 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.715909 Sensitivity=0.861 Specificity=0.564 f1_score=0.756 my_score=0.008268  
+Confusion matrix: tn=97.0000, fp=75.0000, fn=25.0000, tp=155.0000 
+Normalized Confusion matrix: tn=0.5640, fp=0.4360, fn=0.1389, tp=0.8611 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.004749 secs'] secs.
+Selector: Set=196, FeatureCount=13 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.710227 Sensitivity=0.872 Specificity=0.541 f1_score=0.755 my_score=0.008897  
+Confusion matrix: tn=93.0000, fp=79.0000, fn=23.0000, tp=157.0000 
+Normalized Confusion matrix: tn=0.5407, fp=0.4593, fn=0.1278, tp=0.8722 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.004115 secs'] secs.
+Selector: Set=197, FeatureCount=12 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.698864 Sensitivity=0.839 Specificity=0.552 f1_score=0.740 my_score=0.007055  
+Confusion matrix: tn=95.0000, fp=77.0000, fn=29.0000, tp=151.0000 
+Normalized Confusion matrix: tn=0.5523, fp=0.4477, fn=0.1611, tp=0.8389 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.003890 secs'] secs.
+Selector: Set=198, FeatureCount=11 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.696023 Sensitivity=0.883 Specificity=0.500 f1_score=0.748 my_score=0.009523  
+Confusion matrix: tn=86.0000, fp=86.0000, fn=21.0000, tp=159.0000 
+Normalized Confusion matrix: tn=0.5000, fp=0.5000, fn=0.1167, tp=0.8833 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.004930 secs'] secs.
+Selector: Set=199, FeatureCount=10 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.667614 Sensitivity=0.917 Specificity=0.407 f1_score=0.738 my_score=0.012285  
+Confusion matrix: tn=70.0000, fp=102.0000, fn=15.0000, tp=165.0000 
+Normalized Confusion matrix: tn=0.4070, fp=0.5930, fn=0.0833, tp=0.9167 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.003514 secs'] secs.
+Selector: Set=200, FeatureCount=9 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.616477 Sensitivity=0.983 Specificity=0.233 f1_score=0.724 my_score=0.037359  
+Confusion matrix: tn=40.0000, fp=132.0000, fn=3.0000, tp=177.0000 
+Normalized Confusion matrix: tn=0.2326, fp=0.7674, fn=0.0167, tp=0.9833 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.003513 secs'] secs.
+Selector: Set=201, FeatureCount=8 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.565341 Sensitivity=1.000 Specificity=0.110 f1_score=0.702 my_score=0.089158  
+Confusion matrix: tn=19.0000, fp=153.0000, fn=0.0000, tp=180.0000 
+Normalized Confusion matrix: tn=0.1105, fp=0.8895, fn=0.0000, tp=1.0000 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.003227 secs'] secs.
+Selector: Set=202, FeatureCount=7 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.551136 Sensitivity=1.000 Specificity=0.081 f1_score=0.695 my_score=0.070315  
+Confusion matrix: tn=14.0000, fp=158.0000, fn=0.0000, tp=180.0000 
+Normalized Confusion matrix: tn=0.0814, fp=0.9186, fn=0.0000, tp=1.0000 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.003369 secs'] secs.
+Selector: Set=203, FeatureCount=6 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.548295 Sensitivity=1.000 Specificity=0.076 f1_score=0.694 my_score=0.066300  
+Confusion matrix: tn=13.0000, fp=159.0000, fn=0.0000, tp=180.0000 
+Normalized Confusion matrix: tn=0.0756, fp=0.9244, fn=0.0000, tp=1.0000 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.002977 secs'] secs.
+Selector: Set=204, FeatureCount=5 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.539773 Sensitivity=1.000 Specificity=0.058 f1_score=0.690 my_score=0.053729  
+Confusion matrix: tn=10.0000, fp=162.0000, fn=0.0000, tp=180.0000 
+Normalized Confusion matrix: tn=0.0581, fp=0.9419, fn=0.0000, tp=1.0000 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.003002 secs'] secs.
+Selector: Set=205, FeatureCount=4 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.525568 Sensitivity=1.000 Specificity=0.029 f1_score=0.683 my_score=0.030891  
+Confusion matrix: tn=5.0000, fp=167.0000, fn=0.0000, tp=180.0000 
+Normalized Confusion matrix: tn=0.0291, fp=0.9709, fn=0.0000, tp=1.0000 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.003021 secs'] secs.
+Selector: Set=206, FeatureCount=3 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.519886 Sensitivity=1.000 Specificity=0.017 f1_score=0.681 my_score=0.021040  
+Confusion matrix: tn=3.0000, fp=169.0000, fn=0.0000, tp=180.0000 
+Normalized Confusion matrix: tn=0.0174, fp=0.9826, fn=0.0000, tp=1.0000 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.002756 secs'] secs.
+Selector: Set=207, FeatureCount=2 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.511364 Sensitivity=1.000 Specificity=0.000 f1_score=0.677 my_score=0.005434  
+Confusion matrix: tn=0.0000, fp=172.0000, fn=0.0000, tp=180.0000 
+Normalized Confusion matrix: tn=0.0000, fp=1.0000, fn=0.0000, tp=1.0000 
+------------------------------------------------------------
+-------------Statistics-------------------------------------
+Time lapsed: ['0:00:00.002966 secs'] secs.
+Selector: Set=208, FeatureCount=1 with SVM kernel=poly, C=0.5, coef0=1.0, degree=2.0, gamma=0.1.
+Accuracy=0.511364 Sensitivity=1.000 Specificity=0.000 f1_score=0.677 my_score=0.005434  
+Confusion matrix: tn=0.0000, fp=172.0000, fn=0.0000, tp=180.0000 
+Normalized Confusion matrix: tn=0.0000, fp=1.0000, fn=0.0000, tp=1.0000 
+------------------------------------------------------------

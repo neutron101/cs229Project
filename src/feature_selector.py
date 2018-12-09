@@ -2,6 +2,7 @@ class FeatureSelector(object):
 
 	def __init__(self):
 		None
+		self.stats = None
 
 	def attach_dataset(self, dataset):
 		self.data = dataset
@@ -10,10 +11,10 @@ class FeatureSelector(object):
 		 raise NotImplementedError
 
 	def eval(self, stat):
-		pass
+		self.stats = stat
 
 	def eval_set(self):
-		pass
+		return self.stats
 
 	def eval_allsets(self):
 		pass

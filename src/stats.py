@@ -6,6 +6,7 @@ import consts as cs
 from sklearn.metrics import confusion_matrix
 from utils import myprint
 import plot_utils as pu
+import utils
 
 np.set_printoptions(precision=4)
 
@@ -15,11 +16,12 @@ class Stats(object):
 		self.classifier_stat = []
 		self.classifiers_stat = {}
 		self.metrics = {}
+		self.metrics['_features'] = []
 
 	def set_printheader(self, header):
 		self.header = header
 
-	def mystats(self, filename=None, cond=None):
+	def mystats(self, filename=None, cond=None, ids=None, dataset=None):
 	
 		if cond is None or cond is not None and cond(self):
 			myprint('-------------Statistics-------------------------------------\n', filename)
@@ -31,6 +33,8 @@ class Stats(object):
 			myprint('Confusion matrix: tn={d[0]:02.4f}, fp={d[1]:02.4f}, fn={d[2]:02.4f}, tp={d[3]:02.4f} \n'.format(d=self.cnf_matrix.ravel()),filename)				
 			myprint('Normalized Confusion matrix: tn={d[0]:02.4f}, fp={d[1]:02.4f}, fn={d[2]:02.4f}, tp={d[3]:02.4f} \n'.format(d=self.cnf_matrix_norm.ravel()),filename)
 
+			if ids is not None and dataset is not None:
+				utils.do_error(dataset, ids, self.true, self.predictions, filename)
 			myprint('------------------------------------------------------------\n', filename)
 
 	def classifier_stats(self, filename=None, title=None):
@@ -78,6 +82,7 @@ class Stats(object):
 	def record_confusion_matrix(self, true):
 		assert (self.predictions is not None), "Predictions not set"
 
+		self.true = true
 		self.cnf_matrix = confusion_matrix(true, self.predictions)
 		self.cnf_matrix_norm = self.cnf_matrix.astype('float') / self.cnf_matrix.sum(axis=1)[:, np.newaxis]
 

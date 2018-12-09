@@ -11,6 +11,7 @@ from feature_selector import FeatureSelector
 from classifier import BaseClassifier
 import utils
 import os
+import types
 
 config = dict(globals(  ))
 execfile('consts.py', config)
@@ -103,41 +104,48 @@ def model_selection(feature_selector, classifier, dataset, write_filename=None):
 
 			for data in feature_selector.training_data():
 				f_idx = f_idx+1
-				stats = Stats.run_timed(lambda :classifier.fit(data, cl_param))
+
+				if isinstance(data, types.GeneratorType):
+					for pair in data:
+						stats = Stats.run_timed(lambda :classifier.fit(pair, cl_param))
+						feature_selector.eval(stats)
+					stats = feature_selector.eval_set()
+				else:
+					stats = Stats.run_timed(lambda :classifier.fit(data, cl_param))
+					stats.add_metric(list(data[0].axes[0].values), '_features')
+
 
 				if base_filename is not None:
 					write_filename = base_filename+'_'+classifier.desc()+'_'+feature_selector.desc()
 
 				classifier_stats.add_classifier_stat(stats)
-				feature_selector.eval(stats)
-
+				
 				print('Finished model selection with classifer "{}" with {} feature selector "{}"'.format(classifier.desc(), f_idx, feature_selector.desc()))
 				
-				stats.set_printheader(stat_header({'FeatureCount':data[0].shape[0], 'Set':f_idx}, classifier.desc()))
+				stats.set_printheader(stat_header({'FeatureCount': len(stats.metrics['_features'][0]), 'Set':f_idx}, classifier.desc()))
 				# cond = lambda s: s.conf_based_stats()[1] > .70 and (1-s.conf_based_stats()[2]) < .35
 				cond = None
 				stats.mystats(filename=write_filename, cond=cond)
 
 				## Thresholding for good feature set selection which will be saved later
-				if stats.conf_based_stats()[1] > .70 and (1-stats.conf_based_stats()[2]) < .35:
-					X, _ = data
-					fea = X.axes[0].values
-					best.append(fea)
+				# if stats.conf_based_stats()[1] > .70 and (1-stats.conf_based_stats()[2]) < .35:
+				best = []
+				best.append(stats.metrics['_features'][0])
 
 				stats.add_metric(stats.conf_based_stats()[0], 'Accuracy')
 				stats.add_metric(stats.conf_based_stats()[3], 'f1-score')
 
-			feature_selector.eval_set()
 
 			#save the plot to file
-			if write_filename is not None:
-				classifier_stats.classifier_stats(filename=utils.replace_with_(write_filename), title='{} \n {}'.format(classifier.desc(),feature_selector.desc()))
-				best_filename = config.get('best_features_file')+'_'+utils.replace_with_(write_filename)
-			else:
-				best_filename = utils.replace_with_(config.get('best_features_file'))
+				if write_filename is not None:
+					# classifier_stats.classifier_stats(filename=utils.replace_with_(write_filename), title='{} \n {}'.format(classifier.desc(),feature_selector.desc()))
+					best_filename = config.get('best_features_file')+'_'+utils.replace_with_(write_filename)
+				else:
+					best_filename = utils.replace_with_(config.get('best_features_file'))
 
-			#save the best features to file
-			utils.save_string_data(os.path.join(config.get('output_dir'), best_filename), best[-1])
+				#save the best features to file
+				if len(best) > 0:
+					utils.save_string_data(os.path.join(config.get('output_dir'), best_filename), best)
 
 
 
@@ -204,7 +212,8 @@ def test(feature_selector, classifier, dataset, write_filename=None):
 				#writes data to a file/console if the optional condition is true
 				cond = lambda s: s.conf_based_stats()[0]>.6
 				cond = None
-				stats.mystats(filename=write_filename, cond=cond)
+				idents = test_data[0].axes[1].values
+				stats.mystats(filename=write_filename, cond=cond, dataset=dataset, ids=idents)
 
 				classifier_stats.add_classifier_stat(stats)
 

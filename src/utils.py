@@ -9,6 +9,10 @@ from feature_selector import FeatureSelector
 from classifier import BaseClassifier
 import numpy  as np
 from sklearn.feature_selection import VarianceThreshold
+import math
+import matplotlib.pyplot as plt; plt.rcdefaults()
+import numpy as np
+import matplotlib.pyplot as plt
 
 def myprint(str, filename=None):
 	if filename is not None:
@@ -45,7 +49,7 @@ def dictprint(dictvalues):
 	return ", ".join("{}={}".format(k, v) for k, v in dictvalues.items()) if dictvalues is not None else ""
 
 def replace_with_(str):
-	return str.replace(' ', '_').replace('/', '_').replace('.','_')
+	return str.replace(' ', '_').replace('/', '_')
 
 def read_feature_set(params):
 
@@ -85,14 +89,14 @@ def remove_near_zero_variance(x_train, x_test, filename=None, thresholdv=.01):
     
     return nzv_x, nzv_x_test
 
-def do_error(ds, patients, true, predictions):
+def do_error(ds, patients, true, predictions, filename=None):
 
 	if len(true)<= 0 or len(predictions)<=0:
 		return
 
-	ds.load_gene_data()
-
 	data = ds.cdf
+	chars = ['sex', 'age', 'cohort', 'type_cancer_3']
+	data = data.filter(items=chars, axis=1)
 
 	tp = dict((v, []) for v in data.keys().values)
 	tn = dict((v, []) for v in data.keys().values)
@@ -100,26 +104,124 @@ def do_error(ds, patients, true, predictions):
 	fp = dict((v, []) for v in data.keys().values)
 
 	for i in range(len(true)):
-		t = true[i]
-		p = predictions[i]
+		t = true[i] == 1
+		p = predictions[i] == 1
 
 		if t and p:
 			copy(tp, data.T.get(patients[i]))
 		elif not t and not p:
 			copy(tn, data.T.get(patients[i]))
 		elif t and not p:
-			copy(fp, data.T.get(patients[i]))
-		else:
 			copy(fn, data.T.get(patients[i]))
+		else:
+			copy(fp, data.T.get(patients[i]))
+
+	if filename is not None:
+		filename = filename+'_analysis.csv'
+		keys, tpstr = merge_with_counts(tp)
+		myprint('\t{}\n'.format('\t'.join(keys)), filename)
+		myprint('True Postives\t{}\n'.format(tpstr), filename)
+		myprint('True Negatives\t{}\n'.format(merge_with_counts(tn)[1]), filename)
+		myprint('False Postives\t{}\n'.format(merge_with_counts(fp)[1]), filename)
+		myprint('False Negatives\t{}\n'.format(merge_with_counts(fn)[1]), filename)
+
+
+	for kch in chars:
+		n_groups = 4
+
+		vals1, counts1 = np.unique(tp[kch], return_counts=True)
+		vals2, counts2 = np.unique(tn[kch], return_counts=True)
+		vals3, counts3 = np.unique(fp[kch], return_counts=True)
+		vals4, counts4 = np.unique(fn[kch], return_counts=True)
+
+		v = set()
+		v = v.union(vals1)
+		v = v.union(vals2)
+		v = v.union(vals3)
+		v = v.union(vals4)
+
+		fig, ax = plt.subplots()
+		index = np.arange(n_groups)
+		opacity = 0.8
+		bar_width = .5/len(v)
+
+		val_dict = {}
+		for i in v:
+			
+			if i not in val_dict:
+				val_dict[i] = []
+
+			if i in vals1:
+				val_dict[i].append(counts1[list(vals1).index(i)])
+			else:
+				val_dict[i].append(0)
+
+			if i in vals2:
+				val_dict[i].append(counts2[list(vals2).index(i)])
+			else:
+				val_dict[i].append(0)
+
+			if i in vals3:
+				val_dict[i].append(counts3[list(vals3).index(i)])
+			else:
+				val_dict[i].append(0)
+
+			if i in vals4:
+				val_dict[i].append(counts4[list(vals4).index(i)])
+			else:
+				val_dict[i].append(0)
+
+		i = 0
+		for k, v in val_dict.items():
+			rects1 = plt.bar(index + i*bar_width, v, bar_width,
+                 alpha=opacity,
+                 label=k)
+			i += 1
+
+		plt.xlabel(kch)
+		plt.ylabel('Counts')
+		plt.title('Counts by type')
+		plt.xticks(index + bar_width, ('TP', 'TN', 'FP', 'FN'))
+		plt.legend()
+		 
+		plt.tight_layout()
+		plt.show()
+
 
 	return tp, fp, tn, fn
+
 
 def copy(d, series):
 
 	for k in d.keys():
-		d[k].append(series.get(k))
+		value = series.get(k)		
+		if isinstance(value, str):
+			value = value.lower().strip()
+		elif isinstance(value, int):
+			value = value
+		elif isinstance(value, float):
+			if math.isnan(value):
+				value = 'nan'
+			else:
+				value = '{:5.0f}'.format(value)
+			
+		d[k].append(value)
 
 
+def merge_with_counts(d):
 
+	keys = d.keys()
 
+	for k in keys:
+		v = d[k]
+		c = len(v)*1.0
+		vals, counts = np.unique(v, return_counts=True)
+		counts = counts/c 
+
+		s = ', '.join(['{}:{:2.2f}'.format(vals[i], counts[i]) for i in range(len(vals))])
+		d[k] = s
+
+	result = '\t'.join([d[i] for i in keys])
+
+	return keys, result
 
