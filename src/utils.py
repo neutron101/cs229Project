@@ -95,8 +95,9 @@ def do_error(ds, patients, true, predictions, filename=None):
 		return
 
 	data = ds.cdf
-	chars = ['sex', 'age', 'cohort', 'type_cancer_3']
+	chars = ['sex', 'age', 'cohort', 'type_cancer_3', 'bmi', 'weight', 'activity', 'dioxin_like', 'cadmium', 'lead', 'timetodiagnosis', 'sm_status_2']
 	data = data.filter(items=chars, axis=1)
+	data = data.loc[lambda df: df.get('cohort') == 2, :]
 
 	tp = dict((v, []) for v in data.keys().values)
 	tn = dict((v, []) for v in data.keys().values)
@@ -125,14 +126,20 @@ def do_error(ds, patients, true, predictions, filename=None):
 		myprint('False Postives\t{}\n'.format(merge_with_counts(fp)[1]), filename)
 		myprint('False Negatives\t{}\n'.format(merge_with_counts(fn)[1]), filename)
 
+	ranges = np.array([1, 4, 9, 16, 25, 36])
+	plot_range = np.sqrt(ranges[np.where(ranges>=len(chars))[0][0]])
+	
 
-	for kch in chars:
+	for c_i, kch in enumerate(chars):
+		
 		n_groups = 4
 
-		vals1, counts1 = np.unique(tp[kch], return_counts=True)
-		vals2, counts2 = np.unique(tn[kch], return_counts=True)
-		vals3, counts3 = np.unique(fp[kch], return_counts=True)
-		vals4, counts4 = np.unique(fn[kch], return_counts=True)
+		bin_names = set().union(tp[kch], tn[kch], fp[kch], fn[kch])
+
+		vals1, counts1 = counting(tp[kch], bin_names)
+		vals2, counts2 = counting(tn[kch], bin_names)
+		vals3, counts3 = counting(fp[kch], bin_names)
+		vals4, counts4 = counting(fn[kch], bin_names)
 
 		v = set()
 		v = v.union(vals1)
@@ -140,7 +147,6 @@ def do_error(ds, patients, true, predictions, filename=None):
 		v = v.union(vals3)
 		v = v.union(vals4)
 
-		fig, ax = plt.subplots()
 		index = np.arange(n_groups)
 		opacity = 0.8
 		bar_width = .5/len(v)
@@ -171,6 +177,8 @@ def do_error(ds, patients, true, predictions, filename=None):
 			else:
 				val_dict[i].append(0)
 
+
+		plt.subplot(3,4,c_i+1)
 		i = 0
 		for k, v in val_dict.items():
 			rects1 = plt.bar(index + i*bar_width, v, bar_width,
@@ -178,14 +186,14 @@ def do_error(ds, patients, true, predictions, filename=None):
                  label=k)
 			i += 1
 
+		
 		plt.xlabel(kch)
 		plt.ylabel('Counts')
 		plt.title('Counts by type')
 		plt.xticks(index + bar_width, ('TP', 'TN', 'FP', 'FN'))
 		plt.legend()
 		 
-		plt.tight_layout()
-		plt.show()
+	plt.show()
 
 
 	return tp, fp, tn, fn
@@ -193,19 +201,20 @@ def do_error(ds, patients, true, predictions, filename=None):
 
 def copy(d, series):
 
-	for k in d.keys():
-		value = series.get(k)		
-		if isinstance(value, str):
-			value = value.lower().strip()
-		elif isinstance(value, int):
-			value = value
-		elif isinstance(value, float):
-			if math.isnan(value):
-				value = 'nan'
-			else:
-				value = '{:5.0f}'.format(value)
-			
-		d[k].append(value)
+	if series is not None:
+		for k in d.keys():
+			value = series.get(k)		
+			if isinstance(value, str):
+				value = value.lower().strip()
+			elif isinstance(value, int):
+				value = value
+			elif isinstance(value, float):
+				if math.isnan(value):
+					value = int(-0)
+				else:
+					value = int(('{:5.0f}'.format(value)))
+				
+			d[k].append(value)
 
 
 def merge_with_counts(d):
@@ -224,4 +233,21 @@ def merge_with_counts(d):
 	result = '\t'.join([d[i] for i in keys])
 
 	return keys, result
+
+def counting(lt, all_vs):
+	
+	vals, counts = np.unique(lt, return_counts=True)
+	
+	all_vs = [i for i in all_vs if isinstance(i, int)]
+	lt = [i for i in lt if isinstance(i, int)]
+
+	if len(all_vs) > 5 and len(lt)>0:		
+		counts, vals = np.histogram(lt, bins=np.histogram(all_vs, bins=5)[1])
+		nv = []
+		for v in range(len(vals)-1):
+			nv.append('{}-{}'.format(vals[v], vals[v+1]))
+		vals = nv
+		
+	return vals, counts
+
 

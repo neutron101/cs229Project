@@ -16,7 +16,7 @@ np.set_printoptions(threshold=np.nan, linewidth= np.nan)
 
 def main():
 
-
+	print(set().union([1,2], [3,1]))
 	# ds = Dataset('../data/')
 	# ds.load_gene_data()
 

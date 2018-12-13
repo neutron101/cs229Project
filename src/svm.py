@@ -123,10 +123,19 @@ class SVMModelParameterEstimator(BaseClassifier):
 		X, y = data
 		X = X.values.transpose()
 
-		tuned_parameters = [{'kernel': ['rbf'], 'gamma': [0.1, 0.5, 1.25, 1, 1.5, 2, 2.5, 3, 3.5, 4],
-		             'C': [.1, .5, 1, 3, 5, 7, 9, 11]},
-		            {'kernel': ['linear'], 'C': [1, 5, 10, 15]},
-		            {'kernel': ['poly'], 'C': [.1, .5, 1, 3, 5, 7, 10], 'degree':[2,3,4], 'gamma': [0.1, 0.5, 1.25, 1, 1.5, 2], 'coef0' : [1,3,5,7]}]
+		val = lambda d, key, default: d[key] if key in d else default
+		d = lambda l: val(params, l, None)
+		if bool(params):
+			tuned_parameters = [
+		            {'kernel': [d('kernel')], 'C': [float(d('C'))], 'degree':[float(d('degree'))], 'gamma': [float(d('gamma'))], 'coef0' : [float(d('coef0'))]}]
+
+		else:
+			tuned_parameters = [
+					{'kernel': ['rbf'], 'gamma': [0.1, 0.5, 1.25, 1, 1.5, 2, 2.5, 3, 3.5, 4], 'C': [.005, .001, .01, .1, .5, 1, 3, 5, 7, 9, 11]},
+				#	{'kernel': ['linear'], 'C': [.01, .1, .5, 1, 5, 10, 15]},
+		        # {'kernel': ['poly'], 'C': [.005, .001, .01, .1, .5, 1, 3, 5, 7, 10], 'degree':[1,2,3,4], 'gamma': [0.1, 0.5, 1.25, 1, 1.5, 2], 'coef0' : [-1.5, -1, 0, .25, .5, .75, 1,3,5,7]}
+		        ]
+
 
 		self.cv = GridSearchCV(SVC(), tuned_parameters, cv=10,
 		               scoring='accuracy', refit = True)
@@ -134,6 +143,7 @@ class SVMModelParameterEstimator(BaseClassifier):
 		self.cv.fit(X, y)
 		self.classifier = self.cv.best_estimator_
 		print(self.classifier, 'Best params', self.cv.best_params_)
+		print('Best score: {:3.4f}'.format(self.cv.best_score_))
 		self.best_params = self.cv.best_params_
 
 		predictions = self.cv.predict(X) 
